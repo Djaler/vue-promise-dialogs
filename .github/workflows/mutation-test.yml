@@ -1,0 +1,26 @@
+name: Mutation Test
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  mutation-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12
+      - name: Install dependencies
+        uses: pnpm/action-setup@v1.2.1
+        with:
+          version: 5
+          run_install: true
+      - name: Run Stryker
+        run: npm run stryker -- --reporters dashboard --dashboard.reportType full
+        env:
+          STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY  }}
