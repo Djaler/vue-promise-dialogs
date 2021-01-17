@@ -9,7 +9,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: 'src/index.ts',
-            name: 'vue-promise-dialogs',
+            name: 'vuePromiseDialogs',
         },
         rollupOptions: {
             external: Object.keys(packageJson.peerDependencies),
