@@ -2,7 +2,7 @@
 
 # Vue Promise Dialogs
 
-> A tiny & modern library that allows you to work with dialogs as with asynchronous functions.
+> A tiny & modern library that allows you to work with dialogs as with asynchronous functions. [See demo](https://codepen.io/djaler/pen/xxEMZNr?editors=1010)
 
 ## Why?
 
