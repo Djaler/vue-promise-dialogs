@@ -41,10 +41,9 @@ jobs:
           version: 5
           run_install: true
       - name: Run linter
-        uses: samuelmeuli/lint-action@v1
+        uses: reviewdog/action-eslint@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          eslint: true
+          reporter: github-check
 
   test:
     runs-on: ubuntu-latest
