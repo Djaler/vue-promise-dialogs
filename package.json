@@ -8,7 +8,6 @@
     "url": "https://github.com/Djaler/vue-promise-dialogs"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
