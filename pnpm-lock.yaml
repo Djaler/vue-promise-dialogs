@@ -1,9 +1,9 @@
 devDependencies:
   '@djaler/eslint-config-typescript': 0.0.4_eslint@7.17.0+typescript@4.1.3
   '@rollup/plugin-replace': 2.3.4
-  '@stryker-mutator/api': 4.3.1
-  '@stryker-mutator/core': 4.3.1
-  '@stryker-mutator/jest-runner': 4.3.1_57ff0b1ad8fd90cf3719ed6c1321a364
+  '@stryker-mutator/api': 4.4.0
+  '@stryker-mutator/core': 4.4.0
+  '@stryker-mutator/jest-runner': 4.4.0_d4114c071060f29998239d2466bbf542
   '@vue/test-utils': 1.1.2_ae554d8947d7e926b014dda25865f517
   '@zerollup/ts-transform-paths': 1.7.18_typescript@4.1.3
   agadoo: 2.0.0
@@ -711,24 +711,24 @@ packages:
     dev: true
     resolution:
       integrity: sha512-MZPUxrmFubI36XS1DI3qmI0YdN1gks62JtFZvxR67ljjSNCeK6U08Zx4msEWOXuofgqUt6zPHSi1H9fbjR/NRA==
-  /@stryker-mutator/api/4.3.1:
+  /@stryker-mutator/api/4.4.0:
     dependencies:
       mutation-testing-report-schema: 1.5.2
       surrial: 2.0.2
-      tslib: 2.0.3
+      tslib: 2.1.0
     dev: true
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-2eXVXh7yhRML4a6tymx5WU8KmA1BNemIqx7aWnh8Mqx58WSTBfbyipm4JsS7/mzrDLQAguQmqTqsdNJlMkr1eQ==
-  /@stryker-mutator/core/4.3.1:
+      integrity: sha512-JGHc1OCWZr530VM+I9GYWnZVDpqp3eKE+qsB7j6YNx3+3CvCF5D6j74jJrxoF/mzcmrSn/v1koqlOSe95ffvaQ==
+  /@stryker-mutator/core/4.4.0:
     dependencies:
-      '@stryker-mutator/api': 4.3.1
-      '@stryker-mutator/instrumenter': 4.3.1
-      '@stryker-mutator/util': 4.3.1
-      ajv: 6.12.6
+      '@stryker-mutator/api': 4.4.0
+      '@stryker-mutator/instrumenter': 4.4.0
+      '@stryker-mutator/util': 4.4.0
+      ajv: 7.0.3
       chalk: 4.1.0
-      commander: 6.2.1
+      commander: 7.0.0
       execa: 5.0.0
       file-url: 3.0.0
       get-port: 5.0.0
@@ -748,7 +748,7 @@ packages:
       source-map: 0.7.3
       surrial: 2.0.2
       tree-kill: 1.2.2
-      tslib: 2.0.3
+      tslib: 2.1.0
       typed-inject: 3.0.0
       typed-rest-client: 1.8.0
     dev: true
@@ -756,8 +756,8 @@ packages:
       node: '>=10'
     hasBin: true
     resolution:
-      integrity: sha512-QjLaO7tvIOlKou6D1iOys46fmbJM42Ps2Wn5hP7G2cBZHB3DgjfYtCSgwF/fgoFybHPukI/8O/2gm302N/jgow==
-  /@stryker-mutator/instrumenter/4.3.1:
+      integrity: sha512-84LKeeEuiLYKnVmT7CCoc9C8pqFIzksygdTH1cz8d4bzgrsLiZ3qYxMl3bNsKDq8B6YPFqkHG8SSGFde3nZJPQ==
+  /@stryker-mutator/instrumenter/4.4.0:
     dependencies:
       '@babel/core': 7.12.10
       '@babel/generator': 7.12.11
@@ -766,36 +766,37 @@ packages:
       '@babel/plugin-proposal-decorators': 7.12.12_@babel+core@7.12.10
       '@babel/plugin-proposal-private-methods': 7.12.1_@babel+core@7.12.10
       '@babel/preset-typescript': 7.12.7_@babel+core@7.12.10
-      '@stryker-mutator/api': 4.3.1
-      '@stryker-mutator/util': 4.3.1
+      '@stryker-mutator/api': 4.4.0
+      '@stryker-mutator/util': 4.4.0
       angular-html-parser: 1.7.1
+      weapon-regex: 0.3.0
     dev: true
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-NaYopLzD7VrwsryeNDrDEZ3YLXNZXmzQn6A4PukX7t1ETc+4YW0cj0q57IN0UydnYLCEhj6MHmxZAuUZmvTL4Q==
-  /@stryker-mutator/jest-runner/4.3.1_57ff0b1ad8fd90cf3719ed6c1321a364:
+      integrity: sha512-SoCJSeYdauCi7zfq6pi72E+r1nCiJiGCP0QKetUNCIRwoBNWxjuDOdNS0HZOEyMaqAL9bE9CWgT5h+0QZr+FBw==
+  /@stryker-mutator/jest-runner/4.4.0_d4114c071060f29998239d2466bbf542:
     dependencies:
-      '@stryker-mutator/api': 4.3.1
-      '@stryker-mutator/core': 4.3.1
-      '@stryker-mutator/util': 4.3.1
+      '@stryker-mutator/api': 4.4.0
+      '@stryker-mutator/core': 4.4.0
+      '@stryker-mutator/util': 4.4.0
       jest: 26.6.3
       semver: 6.3.0
-      tslib: 2.0.3
+      tslib: 2.1.0
     dev: true
     engines:
       node: '>=10'
     peerDependencies:
-      '@stryker-mutator/core': ~4.3.0
+      '@stryker-mutator/core': ~4.4.0
       jest: '>= 22.0.0'
     resolution:
-      integrity: sha512-19jj9mUR92DDBHveT1xOL5i8H2TynJZ5zNR0oFuoco2p8woXNH8CfjMh42NomawD60r4KqupiKAlMAW2f7IsjQ==
-  /@stryker-mutator/util/4.3.1:
+      integrity: sha512-JxzRXLjH+e2avasqiTCVs0IkYzZTT5qJSDPVRQ9D3yAcdUCzdohUoo1axtDI3CUCW7jjmTlk4Pq1NUJmdJFzEA==
+  /@stryker-mutator/util/4.4.0:
     dependencies:
       lodash.flatmap: 4.5.0
     dev: true
     resolution:
-      integrity: sha512-H5XHukO22BLnn0uIl39AUIabTqNTC7rVtrz8Hb1CeGxYF5d5fn5dUGqjUprW9jsxRzt8N3o/j2ysW1ikfB24iA==
+      integrity: sha512-ZxQKak1XFtTzFuZhOjFkhyVeJNct3Y+IkJSkIX/QtHhgnchrhAfKPM2e+7ohfzosFKme2OYUEuGDdwuHBObypA==
   /@types/babel__core/7.1.12:
     dependencies:
       '@babel/parser': 7.12.11
@@ -1857,6 +1858,12 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
+  /commander/7.0.0:
+    dev: true
+    engines:
+      node: '>= 10'
+    resolution:
+      integrity: sha512-ovx/7NkTrnPuIV8sqk/GjUIIM1+iUQeqA3ye2VNpq9sVoiZsooObWlQy+OPWGI17GDaEoybuAGJm6U8yC077BA==
   /compare-versions/3.6.0:
     dev: true
     resolution:
@@ -5491,7 +5498,7 @@ packages:
       request-promise-core: 1.1.4_request@2.88.2
       stealthy-require: 1.1.1
       tough-cookie: 2.5.0
-    deprecated: 'request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142'
+    deprecated: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
     dev: true
     engines:
       node: '>=0.12.0'
@@ -5521,7 +5528,7 @@ packages:
       tough-cookie: 2.5.0
       tunnel-agent: 0.6.0
       uuid: 3.4.0
-    deprecated: 'request has been deprecated, see https://github.com/request/request/issues/3142'
+    deprecated: request has been deprecated, see https://github.com/request/request/issues/3142
     dev: true
     engines:
       node: '>= 6'
@@ -5574,7 +5581,7 @@ packages:
     resolution:
       integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
   /resolve-url/0.2.1:
-    deprecated: 'https://github.com/lydell/resolve-url#deprecated'
+    deprecated: https://github.com/lydell/resolve-url#deprecated
     dev: true
     resolution:
       integrity: sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
@@ -6379,10 +6386,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
-  /tslib/2.0.3:
+  /tslib/2.1.0:
     dev: true
     resolution:
-      integrity: sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
+      integrity: sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
   /tsutils/3.17.1_typescript@4.1.3:
     dependencies:
       tslib: 1.14.1
@@ -6541,7 +6548,7 @@ packages:
     resolution:
       integrity: sha512-B0yRTzYdUCCn9n+F4+Gh4yIDtMQcaJsmYBDsTSG8g/OejKBodLQ2IHfN3bM7jUsRXndopT7OIXWdYqc1fjmV6g==
   /urix/0.1.0:
-    deprecated: 'Please see https://github.com/lydell/urix#deprecated'
+    deprecated: Please see https://github.com/lydell/urix#deprecated
     dev: true
     resolution:
       integrity: sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
@@ -6670,6 +6677,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
+  /weapon-regex/0.3.0:
+    dev: true
+    resolution:
+      integrity: sha512-IctFbNWZJ7n8mBmEqVAdirWZbLhFlv+2so3FEiZjhzlUuhs07drvKHXiU+DppO8Fz/EbYfbcTt7HGeNzinXUlw==
   /webidl-conversions/5.0.0:
     dev: true
     engines:
@@ -6919,9 +6930,9 @@ packages:
 specifiers:
   '@djaler/eslint-config-typescript': 0.0.4
   '@rollup/plugin-replace': 2.3.4
-  '@stryker-mutator/api': 4.3.1
-  '@stryker-mutator/core': 4.3.1
-  '@stryker-mutator/jest-runner': 4.3.1
+  '@stryker-mutator/api': 4.4.0
+  '@stryker-mutator/core': 4.4.0
+  '@stryker-mutator/jest-runner': 4.4.0
   '@vue/test-utils': 1.1.2
   '@zerollup/ts-transform-paths': 1.7.18
   agadoo: 2.0.0
