@@ -18,7 +18,7 @@
     "check-es6": "es-check es6 dist/vue-promise-dialogs.umd.js",
     "check-treeshake": "agadoo dist/vue-promise-dialogs.es.js",
     "postbuild": "npm run check-es6 && npm run check-treeshake",
-    "prepublishOnly": "npm run lint && npm run build",
+    "prerelease": "npm run lint && npm run test && npm run build",
     "release": "pnpx standard-version"
   },
   "files": [
