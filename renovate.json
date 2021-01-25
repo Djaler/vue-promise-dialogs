@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "gradle": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "depTypeList": [
+        "dependencies"
+      ],
+      "semanticCommitType": "deps",
+      "semanticCommitScope": null
+    },
+    {
+      "depTypeList": [
+        "devDependencies"
+      ],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "packageNames": [
+        "typescript",
+        "ttypescript"
+      ],
+      "packagePatterns": [
+        "vite",
+        "rollup"
+      ],
+      "semanticCommitType": "build",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "packagePatterns": [
+        "jest",
+        "stryker"
+      ],
+      "packageNames": [
+        "@vue/test-utils"
+      ],
+      "semanticCommitType": "test",
+      "semanticCommitScope": "deps"
+    }
+  ]
+}
