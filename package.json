@@ -35,9 +35,9 @@
   "devDependencies": {
     "@djaler/eslint-config-typescript": "0.0.4",
     "@rollup/plugin-replace": "2.3.4",
-    "@stryker-mutator/api": "4.3.1",
-    "@stryker-mutator/core": "4.3.1",
-    "@stryker-mutator/jest-runner": "4.3.1",
+    "@stryker-mutator/api": "4.4.0",
+    "@stryker-mutator/core": "4.4.0",
+    "@stryker-mutator/jest-runner": "4.4.0",
     "@vue/test-utils": "1.1.2",
     "@zerollup/ts-transform-paths": "1.7.18",
     "agadoo": "2.0.0",
