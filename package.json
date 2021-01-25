@@ -19,7 +19,8 @@
     "check-treeshake": "agadoo dist/vue-promise-dialogs.es.js",
     "postbuild": "npm run check-es6 && npm run check-treeshake",
     "prerelease": "npm run lint && npm run test && npm run build",
-    "release": "pnpx standard-version"
+    "release": "pnpx standard-version",
+    "publish": "npm run build && clean-publish"
   },
   "files": [
     "dist"
@@ -41,6 +42,7 @@
     "@vue/test-utils": "1.1.2",
     "@zerollup/ts-transform-paths": "1.7.18",
     "agadoo": "2.0.0",
+    "clean-publish": "1.1.8",
     "copyfiles": "2.4.1",
     "es-check": "5.2.0",
     "eslint": "7.17.0",
