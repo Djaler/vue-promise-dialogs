@@ -3,7 +3,6 @@
     "target": "es2019",
     "module": "esnext",
     "strict": true,
-    "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "allowJs": true,
