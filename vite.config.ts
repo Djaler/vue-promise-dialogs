@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import replace from '@rollup/plugin-replace';
-import tsPathsResolve from 'rollup-plugin-ts-paths-resolve';
 import { defineConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 import packageJson from './package.json';
 
@@ -18,7 +18,7 @@ export default defineConfig({
         minify: false,
     },
     plugins: [
-        tsPathsResolve(),
+        tsconfigPaths(),
         replace({
             'Vue.extend': '/*#__PURE__*/ Vue.extend',
         }),
