@@ -9,4 +9,13 @@ module.exports = {
             typescript: {},
         },
     },
+    rules: {
+        'import/no-extraneous-dependencies': ['error', {
+            devDependencies: [
+                'tests/**',
+                'jest.config.js',
+                'vite.config.ts',
+            ],
+        }],
+    },
 };
