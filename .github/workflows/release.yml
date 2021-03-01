@@ -21,7 +21,8 @@ jobs:
         with:
           version: 5
           run_install: true
-      - name: Publish package
-        uses: JS-DevTools/npm-publish@v1
+      - uses: filipstefansson/set-npm-token-action@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
+      - name: Publish package
+        run: npm run publish
