@@ -7,6 +7,12 @@
     "type": "git",
     "url": "https://github.com/Djaler/vue-promise-dialogs"
   },
+  "keywords": [
+    "vue",
+    "promise",
+    "dialogs",
+    "async"
+  ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "lint": "eslint .",
