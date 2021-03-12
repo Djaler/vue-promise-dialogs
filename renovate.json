@@ -2,9 +2,6 @@
   "extends": [
     "config:base"
   ],
-  "gradle": {
-    "enabled": true
-  },
   "packageRules": [
     {
       "depTypeList": [
