@@ -1,5 +1,5 @@
 /**
- * @type {import('@stryker-mutator/api/core').StrykerOptions}
+ * @type {import('@stryker-mutator/api/src-generated/stryker-core').StrykerOptions}
  */
 module.exports = {
     plugins: ['@stryker-mutator/jest-runner'],
