@@ -21,7 +21,7 @@ devDependencies:
   ttypescript: 1.5.12_typescript@4.2.3
   typescript: 4.2.3
   vite: 2.1.0
-  vite-tsconfig-paths: 2.1.0_vite@2.1.0
+  vite-tsconfig-paths: 2.3.0_vite@2.1.0
   vue: 2.6.12
   vue-class-component: 7.2.6_vue@2.6.12
   vue-property-decorator: 9.1.2_2dc4252c5371093c9ebcca71536ac4e9
@@ -6607,7 +6607,7 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=
-  /vite-tsconfig-paths/2.1.0_vite@2.1.0:
+  /vite-tsconfig-paths/2.3.0_vite@2.1.0:
     dependencies:
       debug: 4.3.1
       tsconfig-paths: 3.9.0
@@ -6616,7 +6616,7 @@ packages:
     peerDependencies:
       vite: '>2.0.0-0'
     resolution:
-      integrity: sha512-SGCAtgg3PdadLsbCyDEOirlFa0bnw6EdtXbqqSyXb6gX769hA0CzTFpEj472j8LyiHnjXMr6SEwNDMADZdJxcg==
+      integrity: sha512-mAbbzsvMPEuxZtPxxUII8SnVoa4NsevYiCcpgjn5FtjiqYTXT/AsmNK0hXHSf+KQrNns8CoVLYycVg4U5HSo7g==
   /vite/2.1.0:
     dependencies:
       esbuild: 0.9.2
@@ -6920,7 +6920,7 @@ specifiers:
   ttypescript: 1.5.12
   typescript: 4.2.3
   vite: 2.1.0
-  vite-tsconfig-paths: 2.1.0
+  vite-tsconfig-paths: 2.3.0
   vue: 2.6.12
   vue-class-component: 7.2.6
   vue-property-decorator: 9.1.2
