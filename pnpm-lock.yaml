@@ -11,7 +11,7 @@ devDependencies:
   agadoo: 2.0.0
   clean-publish: 2.0.0
   copyfiles: 2.4.1
-  es-check: 5.2.0
+  es-check: 5.2.3
   eslint: 7.19.0
   eslint-import-resolver-typescript: 2.3.0_eslint@7.19.0
   husky: 4.3.8
@@ -2192,7 +2192,7 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-LJzK7MrQa8TS0ja2w3YNLzUgJCGPdPOV1yVvezjNnS89D+VR08+Szt2mz3YB2Dck/+w5tfIq/RoUAFqJJGM2yw==
-  /es-check/5.2.0:
+  /es-check/5.2.3:
     dependencies:
       acorn: 6.4.2
       caporal: 1.4.0
@@ -2202,7 +2202,7 @@ packages:
       node: '>= 4'
     hasBin: true
     resolution:
-      integrity: sha512-9vF1x3LXhANiXgauW+kSFNvEy4XymUddCV2a32Af/ruVmyfLHQPKkVz4bhafJsZhWxXbdiySX+cF7p4/w0ABBQ==
+      integrity: sha512-+KiUcqXXqHk9H05l7Cg2sGrtiUyKcgY5hslm0DSb0iv6K5V/DIiRxJhvgA75TM99xO6FAIGbZSW8bAPbZDsDow==
   /es-to-primitive/1.2.1:
     dependencies:
       is-callable: 1.2.3
@@ -6717,7 +6717,7 @@ specifiers:
   agadoo: 2.0.0
   clean-publish: 2.0.0
   copyfiles: 2.4.1
-  es-check: 5.2.0
+  es-check: 5.2.3
   eslint: 7.19.0
   eslint-import-resolver-typescript: 2.3.0
   husky: 4.3.8
