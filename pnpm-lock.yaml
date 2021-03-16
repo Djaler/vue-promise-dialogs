@@ -6,7 +6,7 @@ devDependencies:
   '@stryker-mutator/core': 4.5.1
   '@stryker-mutator/jest-runner': 4.5.1_7a60eaa03d44e2286fd8ce219a345cdf
   '@types/jest': 26.0.20
-  '@vue/test-utils': 1.1.2_ae554d8947d7e926b014dda25865f517
+  '@vue/test-utils': 1.1.3_ae554d8947d7e926b014dda25865f517
   '@zerollup/ts-transform-paths': 1.7.18_typescript@4.2.3
   agadoo: 2.0.0
   clean-publish: 2.0.0
@@ -1008,7 +1008,7 @@ packages:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
     resolution:
       integrity: sha512-Q9t90JCvfYaN0OfFUgaLqByOfz8yPeTAdotn/XYNm5q9eHax90gzdb+RJ6E9T5s97Kv/UHWKERTmqA0jTKAEHw==
-  /@vue/test-utils/1.1.2_ae554d8947d7e926b014dda25865f517:
+  /@vue/test-utils/1.1.3_ae554d8947d7e926b014dda25865f517:
     dependencies:
       dom-event-types: 1.0.0
       lodash: 4.17.21
@@ -1020,7 +1020,7 @@ packages:
       vue: 2.x
       vue-template-compiler: ^2.x
     resolution:
-      integrity: sha512-utbIL7zn9c+SjhybPwh48lpWCiluFCbP1yyRNAy1fQsw/6hiNFioaWy05FoVAFIZXC5WwBf+5r4ypfM1j/nI4A==
+      integrity: sha512-BAY1Cwe9JpkJseimC295EW3YlAmgIJI9OPkg2FSP62+PHZooB0B+wceDi9TYyU57oqzL0yLbcP73JKFpKiLc9A==
   /@zerollup/ts-helpers/1.7.18_typescript@4.2.3:
     dependencies:
       resolve: 1.20.0
@@ -6712,7 +6712,7 @@ specifiers:
   '@stryker-mutator/core': 4.5.1
   '@stryker-mutator/jest-runner': 4.5.1
   '@types/jest': 26.0.20
-  '@vue/test-utils': 1.1.2
+  '@vue/test-utils': 1.1.3
   '@zerollup/ts-transform-paths': 1.7.18
   agadoo: 2.0.0
   clean-publish: 2.0.0
