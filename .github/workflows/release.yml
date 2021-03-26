@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -35,3 +37,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
       - name: Publish package
         run: npm run publish
+      - name: Create github release
+        run: npm run release:github
+        env:
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
