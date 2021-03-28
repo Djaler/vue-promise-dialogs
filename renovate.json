@@ -1,44 +1,5 @@
 {
   "extends": [
-    "config:base"
-  ],
-  "packageRules": [
-    {
-      "depTypeList": [
-        "dependencies"
-      ],
-      "semanticCommitType": "deps",
-      "semanticCommitScope": null
-    },
-    {
-      "depTypeList": [
-        "devDependencies"
-      ],
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "deps"
-    },
-    {
-      "packageNames": [
-        "typescript",
-        "ttypescript"
-      ],
-      "packagePatterns": [
-        "vite",
-        "rollup"
-      ],
-      "semanticCommitType": "build",
-      "semanticCommitScope": "deps"
-    },
-    {
-      "packagePatterns": [
-        "jest",
-        "stryker"
-      ],
-      "packageNames": [
-        "@vue/test-utils"
-      ],
-      "semanticCommitType": "test",
-      "semanticCommitScope": "deps"
-    }
+    "github>djaler/renovate-config:js"
   ]
 }
