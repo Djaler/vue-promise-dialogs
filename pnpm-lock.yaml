@@ -15,7 +15,7 @@ devDependencies:
   copyfiles: 2.4.1
   es-check: 5.2.0
   eslint: 7.23.0
-  eslint-import-resolver-typescript: 2.3.0_eslint@7.23.0
+  eslint-import-resolver-typescript: 2.4.0_eslint@7.23.0
   husky: 4.3.8
   jest: 26.6.3
   lint-staged: 10.5.3
@@ -2796,7 +2796,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ogtf+5AB/O+nM6DIeBUNr2fuT7ot9Qg/1harBfBtaP13ekEWFQEEMP94BCB7zaNW3gyY+8SHYF00rnqYwXKWOA==
-  /eslint-import-resolver-typescript/2.3.0_eslint@7.23.0:
+  /eslint-import-resolver-typescript/2.4.0_eslint@7.23.0:
     dependencies:
       debug: 4.3.1
       eslint: 7.23.0
@@ -2811,7 +2811,7 @@ packages:
       eslint: '*'
       eslint-plugin-import: '*'
     resolution:
-      integrity: sha512-MHSXvmj5e0SGOOBhBbt7C+fWj1bJbtSYFAD85Xeg8nvUtuooTod2HQb8bfhE9f5QyyNxEfgzqOYFCvmdDIcCuw==
+      integrity: sha512-useJKURidCcldRLCNKWemr1fFQL1SzB3G4a0li6lFGvlc5xGe1hY343bvG07cbpCzPuM/lK19FIJB3XGFSkplA==
   /eslint-module-utils/2.6.0:
     dependencies:
       debug: 2.6.9
@@ -8156,7 +8156,7 @@ specifiers:
   copyfiles: 2.4.1
   es-check: 5.2.0
   eslint: 7.23.0
-  eslint-import-resolver-typescript: 2.3.0
+  eslint-import-resolver-typescript: 2.4.0
   husky: 4.3.8
   jest: 26.6.3
   lint-staged: 10.5.3
