@@ -3,9 +3,9 @@ devDependencies:
   '@djaler/eslint-config-typescript': 0.0.5_eslint@7.24.0+typescript@4.2.3
   '@jest/types': 26.6.2
   '@rollup/plugin-replace': 2.3.4
-  '@stryker-mutator/api': 4.5.1
-  '@stryker-mutator/core': 4.5.1
-  '@stryker-mutator/jest-runner': 4.5.1_7a60eaa03d44e2286fd8ce219a345cdf
+  '@stryker-mutator/api': 4.6.0
+  '@stryker-mutator/core': 4.6.0
+  '@stryker-mutator/jest-runner': 4.6.0_e4b7e352a828f43db91b74502c28b43e
   '@types/jest': 26.0.20
   '@vue/test-utils': 1.1.2_ae554d8947d7e926b014dda25865f517
   '@zerollup/ts-transform-paths': 1.7.18_typescript@4.2.3
@@ -734,24 +734,24 @@ packages:
     dev: true
     resolution:
       integrity: sha512-MZPUxrmFubI36XS1DI3qmI0YdN1gks62JtFZvxR67ljjSNCeK6U08Zx4msEWOXuofgqUt6zPHSi1H9fbjR/NRA==
-  /@stryker-mutator/api/4.5.1:
+  /@stryker-mutator/api/4.6.0:
     dependencies:
       mutation-testing-report-schema: 1.5.2
       surrial: 2.0.2
-      tslib: 2.1.0
+      tslib: 2.2.0
     dev: true
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-gi4fg3XXp37su+d4t0J9mAXa9qYr4v/sFo5mtI0VXaE0ApHNwnyvZcrVHKjj1yw2V54EQIp4a2l79Sn2dhHF3Q==
-  /@stryker-mutator/core/4.5.1:
+      integrity: sha512-YyIkXF9llNjvbtcZhWJ9ARrVV9yQQKEY3ZiLTG2vWZ/tXDkk8O5/NZoCJ/3Mmwfh513tcDhb2sSl9jeDCtwggw==
+  /@stryker-mutator/core/4.6.0:
     dependencies:
-      '@stryker-mutator/api': 4.5.1
-      '@stryker-mutator/instrumenter': 4.5.1
-      '@stryker-mutator/util': 4.5.1
-      ajv: 7.1.1
+      '@stryker-mutator/api': 4.6.0
+      '@stryker-mutator/instrumenter': 4.6.0
+      '@stryker-mutator/util': 4.6.0
+      ajv: 8.1.0
       chalk: 4.1.0
-      commander: 7.1.0
+      commander: 7.2.0
       execa: 5.0.0
       file-url: 3.0.0
       get-port: 5.0.0
@@ -771,7 +771,7 @@ packages:
       source-map: 0.7.3
       surrial: 2.0.2
       tree-kill: 1.2.2
-      tslib: 2.1.0
+      tslib: 2.2.0
       typed-inject: 3.0.0
       typed-rest-client: 1.8.3
     dev: true
@@ -779,8 +779,8 @@ packages:
       node: '>=10'
     hasBin: true
     resolution:
-      integrity: sha512-T5lJwoNOW88XiBiEYKi5L0u2QYZ1PewoPU5dpi7fyOlOXhTUnSZv00fZfBtLwaGgfk4knWbehD8mxBnlnsvhhA==
-  /@stryker-mutator/instrumenter/4.5.1:
+      integrity: sha512-YAzABDeWzp92M/2ux4ES7zr7M64J8uyO7UZif8P3KQalBk0Wy+pREtNLCJBvdhEDr8jhQrc/bXR3ui3+o1GRsg==
+  /@stryker-mutator/instrumenter/4.6.0:
     dependencies:
       '@babel/core': 7.13.10
       '@babel/generator': 7.13.9
@@ -789,37 +789,37 @@ packages:
       '@babel/plugin-proposal-decorators': 7.13.5_@babel+core@7.13.10
       '@babel/plugin-proposal-private-methods': 7.13.0_@babel+core@7.13.10
       '@babel/preset-typescript': 7.13.0_@babel+core@7.13.10
-      '@stryker-mutator/api': 4.5.1
-      '@stryker-mutator/util': 4.5.1
-      angular-html-parser: 1.7.1
+      '@stryker-mutator/api': 4.6.0
+      '@stryker-mutator/util': 4.6.0
+      angular-html-parser: 1.8.0
       weapon-regex: 0.4.1
     dev: true
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-U+44GJIEJAejQ375I/Q6Es2garBsnC2pZWtWhkO+9gsK/Ev3ftASfWSwi12NTqmQPbY8Hh8NKZjoXoRA9GD1qw==
-  /@stryker-mutator/jest-runner/4.5.1_7a60eaa03d44e2286fd8ce219a345cdf:
+      integrity: sha512-XyBnuGMN0kReexknmfaAV4FFROY8MzBjc/hPWl/qMHTacntn5KomKhKJ76DlvMq9WUqc/gd7aR4Qxr2ZVAu25Q==
+  /@stryker-mutator/jest-runner/4.6.0_e4b7e352a828f43db91b74502c28b43e:
     dependencies:
-      '@stryker-mutator/api': 4.5.1
-      '@stryker-mutator/core': 4.5.1
-      '@stryker-mutator/util': 4.5.1
+      '@stryker-mutator/api': 4.6.0
+      '@stryker-mutator/core': 4.6.0
+      '@stryker-mutator/util': 4.6.0
       jest: 26.6.3
       semver: 6.3.0
-      tslib: 2.1.0
+      tslib: 2.2.0
     dev: true
     engines:
       node: '>=10'
     peerDependencies:
-      '@stryker-mutator/core': ~4.5.0
+      '@stryker-mutator/core': ~4.6.0
       jest: '>= 22.0.0'
     resolution:
-      integrity: sha512-ei0YWdf3tjShChvU5cBBET3Eqa3PfshcfHxAG/RgYgrfZYGHL1GnT5dsGLojf4b5TEPY12Q9HVkSnsnoFvW5mQ==
-  /@stryker-mutator/util/4.5.1:
+      integrity: sha512-jalnR1euHkBl86iGOWJRaNfQtbExnGHmxywKOMZj71HqzvjrHPA1fLdlzXeRu54aasnq7PvLE+m8OY1p0A3gpA==
+  /@stryker-mutator/util/4.6.0:
     dependencies:
       lodash.flatmap: 4.5.0
     dev: true
     resolution:
-      integrity: sha512-oURW2MDXntOjRke9FxmhMAjULtPr3r8unwVAN6vxIBdOOC/50hNKgu/+rHgFwIcTRsF7mg9axeYZ4PwKzlSz9Q==
+      integrity: sha512-VuzwHIB5AqoeBDwzBB5+injGrnd+BoPCdLYEUAh0CINzqlgn3mx8tT/FNs+m/WcQR3LypKY2U1CVpmkPAgOp7A==
   /@types/babel__core/7.1.13:
     dependencies:
       '@babel/parser': 7.13.11
@@ -1152,15 +1152,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
-  /ajv/7.1.1:
-    dependencies:
-      fast-deep-equal: 3.1.3
-      json-schema-traverse: 1.0.0
-      require-from-string: 2.0.2
-      uri-js: 4.4.1
-    dev: true
-    resolution:
-      integrity: sha512-ga/aqDYnUy/o7vbsRTFhhTsNeXiYb5JWDIcRIeZfwRNCefwjNTVYCGdGSUrEmiu3yDK3vFvNbgJxvrQW4JXrYQ==
   /ajv/7.2.1:
     dependencies:
       fast-deep-equal: 3.1.3
@@ -1170,14 +1161,23 @@ packages:
     dev: true
     resolution:
       integrity: sha512-+nu0HDv7kNSOua9apAVc979qd932rrZeb3WOvoiD31A/p1mIE5/9bN2027pE2rOPYEdS3UHzsvof4hY+lM9/WQ==
-  /angular-html-parser/1.7.1:
+  /ajv/8.1.0:
+    dependencies:
+      fast-deep-equal: 3.1.3
+      json-schema-traverse: 1.0.0
+      require-from-string: 2.0.2
+      uri-js: 4.4.1
+    dev: true
+    resolution:
+      integrity: sha512-B/Sk2Ix7A36fs/ZkuGLIR86EdjbgR6fsAcbx9lOP/QBSXujDNbVmIS/U4Itz5k8fPFDeVZl/zQ/gJW4Jrq6XjQ==
+  /angular-html-parser/1.8.0:
     dependencies:
       tslib: 1.14.1
     dev: true
     engines:
       node: '>= 6'
     resolution:
-      integrity: sha512-bDOeuWyKNuvggsBcN9jG7bFCuy5L3vHGoJ5+djuvo6vhQiCTu01smwOlh2WBa3ZjdttBY/vtb9XWfCoaMdKL6Q==
+      integrity: sha512-n5ZowjJJs1OPG3DHDSyUXZvscQzy7uQG227ncL1NzbJEPzfb2XtBZ9qT0PW7cbD7MViho3ijawXoRLCM0ih1rw==
   /ansi-colors/4.1.1:
     dev: true
     engines:
@@ -1913,12 +1913,12 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
-  /commander/7.1.0:
+  /commander/7.2.0:
     dev: true
     engines:
       node: '>= 10'
     resolution:
-      integrity: sha512-pRxBna3MJe6HKnBGsDyMv8ETbptw3axEdYHoqNh7gu5oDcew8fs0xnivZGm06Ogk8zGAJ9VX+OPEr2GXEQK4dg==
+      integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
   /compare-func/1.3.4:
     dependencies:
       array-ify: 1.0.0
@@ -7562,10 +7562,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
-  /tslib/2.1.0:
+  /tslib/2.2.0:
     dev: true
     resolution:
-      integrity: sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
+      integrity: sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
   /tsutils/3.21.0_typescript@4.2.3:
     dependencies:
       tslib: 1.14.1
@@ -8144,9 +8144,9 @@ specifiers:
   '@djaler/eslint-config-typescript': 0.0.5
   '@jest/types': 26.6.2
   '@rollup/plugin-replace': 2.3.4
-  '@stryker-mutator/api': 4.5.1
-  '@stryker-mutator/core': 4.5.1
-  '@stryker-mutator/jest-runner': 4.5.1
+  '@stryker-mutator/api': 4.6.0
+  '@stryker-mutator/core': 4.6.0
+  '@stryker-mutator/jest-runner': 4.6.0
   '@types/jest': 26.0.20
   '@vue/test-utils': 1.1.2
   '@zerollup/ts-transform-paths': 1.7.18
