@@ -53,7 +53,7 @@
     "@vue/test-utils": "1.1.2",
     "@zerollup/ts-transform-paths": "1.7.18",
     "agadoo": "2.0.0",
-    "clean-publish": "2.0.0",
+    "clean-publish": "2.2.0",
     "conventional-github-releaser": "3.1.5",
     "copyfiles": "2.4.1",
     "es-check": "5.2.0",
