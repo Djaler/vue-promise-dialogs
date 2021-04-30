@@ -10,7 +10,7 @@ devDependencies:
   '@vue/test-utils': 1.1.2_ae554d8947d7e926b014dda25865f517
   '@zerollup/ts-transform-paths': 1.7.18_typescript@4.2.3
   agadoo: 2.0.0
-  clean-publish: 2.0.0
+  clean-publish: 2.2.0
   conventional-github-releaser: 3.1.5
   copyfiles: 2.4.1
   es-check: 5.2.0
@@ -1750,7 +1750,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-qOhPa/Fj7s6TY8H8esGu5QNpMMQxz79h+urzrNYN6mn+9BnxlDGf5QZ+XeCDsxSjPqsSR56XOZOJmpeurnLMeg==
-  /clean-publish/2.0.0:
+  /clean-publish/2.2.0:
     dependencies:
       cross-spawn: 7.0.3
       fs-extra: 9.1.0
@@ -1760,7 +1760,7 @@ packages:
       node: ^10.17.0 || ^12.0.0 || >=14.0.0
     hasBin: true
     resolution:
-      integrity: sha512-ue58DIKxbin8+KaRsbUoJbqbWk2YmSd2K/EEB/zSRSDKTyRRo0RvsqzNanZPk30pzqBIjRXOI5zMlDqR13U2Xg==
+      integrity: sha512-U+/Y5YXbxnqWlh8y/toKSEGbMvIvsgfkfJ7yK0v0uQ1mz07lNNSxceY7XaFweEw8LFQo8Al3H7SuQHXbf5Xw8g==
   /clean-stack/2.2.0:
     dev: true
     engines:
@@ -8174,7 +8174,7 @@ specifiers:
   '@vue/test-utils': 1.1.2
   '@zerollup/ts-transform-paths': 1.7.18
   agadoo: 2.0.0
-  clean-publish: 2.0.0
+  clean-publish: 2.2.0
   conventional-github-releaser: 3.1.5
   copyfiles: 2.4.1
   es-check: 5.2.0
