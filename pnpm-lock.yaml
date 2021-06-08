@@ -23,8 +23,8 @@ devDependencies:
   ts-jest: 26.5.3_jest@26.6.3+typescript@4.2.3
   ttypescript: 1.5.12_typescript@4.2.3
   typescript: 4.2.3
-  vite: 2.3.2
-  vite-tsconfig-paths: 3.3.1_vite@2.3.2
+  vite: 2.3.7
+  vite-tsconfig-paths: 3.3.1_vite@2.3.7
   vue: 2.6.12
   vue-class-component: 7.2.6_vue@2.6.12
   vue-property-decorator: 9.1.2_2dc4252c5371093c9ebcca71536ac4e9
@@ -2833,12 +2833,12 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==
-  /esbuild/0.11.20:
+  /esbuild/0.12.6:
     dev: true
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-QOZrVpN/Yz74xfat0H6euSgn3RnwLevY1mJTEXneukz1ln9qB+ieaerRMzSeETpz/UJWsBMzRVR/andBht5WKw==
+      integrity: sha512-RDvVLvAjsq/kIZJoneMiUOH7EE7t2QaW7T3Q7EdQij14+bZbDq5sndb0tTanmHIFSqZVMBMMyqzVHkS3dJobeA==
   /escalade/3.1.1:
     dev: true
     engines:
@@ -6327,16 +6327,16 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
-  /postcss/8.2.15:
+  /postcss/8.3.0:
     dependencies:
       colorette: 1.2.2
       nanoid: 3.1.23
-      source-map: 0.6.1
+      source-map-js: 0.6.2
     dev: true
     engines:
       node: ^10 || ^12 || >=14
     resolution:
-      integrity: sha512-2zO3b26eJD/8rb106Qu2o7Qgg52ND5HPjcyQiK2B98O388h43A448LCslC0dI2P97wCAQRJsFvwTRcXxTKds+Q==
+      integrity: sha512-+ogXpdAjWGa+fdYY5BQ96V/6tAo+TdSSIMP5huJBIygdWwKtVoB5JWZ7yUd4xZ8r+8Kvvx4nyg/PQ071H4UtcQ==
   /prelude-ls/1.1.2:
     dev: true
     engines:
@@ -7096,6 +7096,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-ZYU1WEhh7JfXMNbPQYIuH1ZoQSg=
+  /source-map-js/0.6.2:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==
   /source-map-resolve/0.5.3:
     dependencies:
       atob: 2.1.2
@@ -8005,22 +8011,22 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=
-  /vite-tsconfig-paths/3.3.1_vite@2.3.2:
+  /vite-tsconfig-paths/3.3.1_vite@2.3.7:
     dependencies:
       debug: 4.3.1
       globrex: 0.1.2
       recrawl-sync: 2.2.1
       tsconfig-paths: 3.9.0
-      vite: 2.3.2
+      vite: 2.3.7
     dev: true
     peerDependencies:
       vite: '>2.0.0-0'
     resolution:
       integrity: sha512-li3cJNxPOKFTJ7Zul9KM1DsVUH27kfa6mLkYj+ouFnrt6nWAiX3dRIt7HiBDuSHRng/BwqK9nwPk+5TV547oQQ==
-  /vite/2.3.2:
+  /vite/2.3.7:
     dependencies:
-      esbuild: 0.11.20
-      postcss: 8.2.15
+      esbuild: 0.12.6
+      postcss: 8.3.0
       resolve: 1.20.0
       rollup: 2.41.2
     dev: true
@@ -8030,7 +8036,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     resolution:
-      integrity: sha512-QhLdOompDrfkyryCNTts9HE+eJhvhN9ibKNJ5Q8DpQai+6nOsuIlaveZNg67e1O/2QaWqXeBo82eHnAs1De2bQ==
+      integrity: sha512-Y0xRz11MPYu/EAvzN94+FsOZHbSvO6FUvHv127CyG7mV6oDoay2bw+g5y9wW3Blf8OY3chaz3nc/DcRe1IQ3Nw==
   /vue-class-component/7.2.6_vue@2.6.12:
     dependencies:
       vue: 2.6.12
@@ -8336,7 +8342,7 @@ specifiers:
   ts-jest: 26.5.3
   ttypescript: 1.5.12
   typescript: 4.2.3
-  vite: 2.3.2
+  vite: 2.3.7
   vite-tsconfig-paths: 3.3.1
   vue: 2.6.12
   vue-class-component: 7.2.6
