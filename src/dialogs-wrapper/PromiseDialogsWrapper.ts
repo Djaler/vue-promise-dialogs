@@ -8,6 +8,7 @@ interface DialogData<P, R> {
     params: P;
     promiseResolve: (value: R) => void;
     promiseReject: (error: unknown) => void;
+    unmountDelay?: number;
 }
 
 export default Vue.extend({
@@ -29,7 +30,7 @@ export default Vue.extend({
         promiseDialogsWrapper.value = undefined;
     },
     methods: {
-        add<P, R>(component: RegularComponent, params: P): Promise<R> {
+        add<P, R>(component: RegularComponent, params: P, unmountDelay?: number): Promise<R> {
             return new Promise<R>((resolve, reject) => {
                 this.dialogsData = new Map([
                     ...this.dialogsData,
@@ -41,22 +42,31 @@ export default Vue.extend({
                             params,
                             promiseResolve: resolve,
                             promiseReject: reject,
+                            unmountDelay,
                         },
                     ],
                 ]);
             });
         },
-        onResolve(id: symbol, result: unknown) {
+        onResolve(id: symbol, result: unknown, unmountDelay?: number) {
             this.dialogsData.get(id)?.promiseResolve(result);
-            this.dialogsData = new Map(
-                [...this.dialogsData].filter(([key]) => key !== id),
-            );
+            this.unmountDialog(id, unmountDelay);
         },
-        onReject(id: symbol, error: unknown) {
+        onReject(id: symbol, error: unknown, unmountDelay?: number) {
             this.dialogsData.get(id)?.promiseReject(error);
-            this.dialogsData = new Map(
-                [...this.dialogsData].filter(([key]) => key !== id),
-            );
+            this.unmountDialog(id, unmountDelay);
+        },
+        unmountDialog(id: symbol, delay?: number) {
+            const unmount = () => {
+                this.dialogsData = new Map(
+                    [...this.dialogsData].filter(([key]) => key !== id),
+                );
+            };
+            if (delay) {
+                setTimeout(unmount, delay);
+            } else {
+                unmount();
+            }
         },
     },
     render(createElement): VNode {
@@ -69,11 +79,11 @@ export default Vue.extend({
                         params: value.params,
                     },
                     on: {
-                        resolve: (result: unknown) => {
-                            this.onResolve(id, result);
+                        resolve: (result: unknown, unmountDelay?: number) => {
+                            this.onResolve(id, result, unmountDelay || value.unmountDelay);
                         },
-                        reject: (error: unknown) => {
-                            this.onReject(id, error);
+                        reject: (error: unknown, unmountDelay?: number) => {
+                            this.onReject(id, error, unmountDelay || value.unmountDelay);
                         },
                     },
                 }),

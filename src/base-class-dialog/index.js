@@ -3,11 +3,11 @@ import Vue from 'vue';
 export default Vue.extend({
     props: ['params'],
     methods: {
-        resolve(value) {
-            this.$emit('resolve', value);
+        resolve(value, unmountDelay) {
+            this.$emit('resolve', value, unmountDelay);
         },
-        reject(error) {
-            this.$emit('reject', error);
+        reject(error, unmountDelay) {
+            this.$emit('reject', error, unmountDelay);
         },
     },
 });
