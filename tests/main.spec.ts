@@ -1,12 +1,11 @@
 import { mount, Wrapper } from '@vue/test-utils';
 import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
 
-import { BasePromiseDialog, createPromiseDialog, PromiseDialogsWrapper } from '@/index';
+import { createPromiseDialog, PromiseDialogsWrapper } from '@/index';
 
 let wrapper: Wrapper<Vue>;
 
-const FirstTestDialog = Vue.extend({
+const TestDialog = Vue.extend({
     template: `
       <div>
       <p>{{ params.text }}</p>
@@ -23,33 +22,7 @@ const FirstTestDialog = Vue.extend({
     },
 });
 
-const firstTestDialogFunction = createPromiseDialog<{ text: string }, boolean>(FirstTestDialog);
-
-@Component({
-    template: `
-      <div>
-      <p>{{ params.text }}</p>
-      <button name="true" @click="onTrue">True</button>
-      <button name="false" @click="onFalse">False</button>
-      <button name="cancel" @click="onCancel">Cancel</button>
-      </div>
-    `,
-})
-class SecondTestDialog extends BasePromiseDialog<{ text: string }, boolean> {
-    onTrue() {
-        this.resolve(true);
-    }
-
-    onFalse() {
-        this.resolve(true);
-    }
-
-    onCancel() {
-        this.reject('cancel');
-    }
-}
-
-const secondTestDialogFunction = createPromiseDialog(SecondTestDialog);
+const testDialogFunction = createPromiseDialog<{ text: string }, boolean>(TestDialog);
 
 describe('when PromiseDialogsWrapper mounted', () => {
     beforeEach(() => {
@@ -71,28 +44,68 @@ describe('when PromiseDialogsWrapper mounted', () => {
         expect(wrapper.findComponent(PromiseDialogsWrapper).vm.$options.name).toEqual('PromiseDialogsWrapper');
     });
 
-    describe('when first dialog function called', () => {
-        let firstResultPromise: Promise<boolean>;
+    describe('when dialog function called', () => {
+        let resultPromise: Promise<boolean>;
+        let dialog: Wrapper<Vue>;
 
-        beforeEach(() => {
-            firstResultPromise = firstTestDialogFunction({ text: 'Test' });
+        beforeEach(async () => {
+            resultPromise = testDialogFunction({ text: 'Test' });
+
+            await wrapper.vm.$nextTick();
+
+            dialog = wrapper.findComponent(TestDialog);
         });
 
         afterEach(() => {
-            firstResultPromise.catch(() => {
+            resultPromise.catch(() => {
                 // ignore
             });
         });
 
-        it('should mount first dialog component', () => {
-            expect(wrapper.findComponent(FirstTestDialog).exists()).toBe(true);
+        it('should mount dialog component', () => {
+            expect(dialog.exists()).toBe(true);
         });
 
-        describe('when second dialog function called', () => {
-            let secondResultPromise: Promise<boolean>;
+        describe('when variant selected in dialog', () => {
+            beforeEach(async () => {
+                const button = dialog.find('button[name="true"]');
+                await button.trigger('click');
+            });
 
-            beforeEach(() => {
-                secondResultPromise = secondTestDialogFunction({ text: 'Test' });
+            it('should resolve dialog function promise', async () => {
+                await expect(resultPromise).resolves.toBe(true);
+            });
+
+            it('should unmount dialog component', () => {
+                expect(dialog.exists()).toBe(false);
+            });
+        });
+
+        describe('when cancel variant selected in dialog', () => {
+            beforeEach(async () => {
+                const button = dialog.find('button[name="cancel"]');
+                await button.trigger('click');
+            });
+
+            it('should reject dialog function promise', async () => {
+                await expect(resultPromise).rejects.toEqual('cancel');
+            });
+
+            it('should unmount dialog component', () => {
+                expect(dialog.exists()).toBe(false);
+            });
+        });
+
+        describe('when dialog function called second time', () => {
+            let secondResultPromise: Promise<boolean>;
+            let secondDialog: Wrapper<Vue>;
+
+            beforeEach(async () => {
+                secondResultPromise = testDialogFunction({ text: 'Test' });
+
+                await wrapper.vm.$nextTick();
+
+                secondDialog = wrapper.findAllComponents(TestDialog).at(1);
             });
 
             afterEach(() => {
@@ -102,12 +115,12 @@ describe('when PromiseDialogsWrapper mounted', () => {
             });
 
             it('should mount second dialog component', () => {
-                expect(wrapper.findComponent(SecondTestDialog).exists()).toBe(true);
+                expect(secondDialog.exists()).toBe(true);
             });
 
             describe('when variant selected in second dialog', () => {
                 beforeEach(async () => {
-                    const button = wrapper.findComponent(SecondTestDialog).find('button[name="true"]');
+                    const button = secondDialog.find('button[name="true"]');
                     await button.trigger('click');
                 });
 
@@ -116,17 +129,17 @@ describe('when PromiseDialogsWrapper mounted', () => {
                 });
 
                 it('should unmount second dialog component', () => {
-                    expect(wrapper.findComponent(SecondTestDialog).exists()).toBe(false);
+                    expect(secondDialog.exists()).toBe(false);
                 });
 
                 it('should not unmount first dialog component', () => {
-                    expect(wrapper.findComponent(FirstTestDialog).exists()).toBe(true);
+                    expect(dialog.exists()).toBe(true);
                 });
             });
 
             describe('when cancel variant selected in second dialog', () => {
                 beforeEach(async () => {
-                    const button = wrapper.findComponent(SecondTestDialog).find('button[name="cancel"]');
+                    const button = secondDialog.find('button[name="cancel"]');
                     await button.trigger('click');
                 });
 
@@ -135,42 +148,12 @@ describe('when PromiseDialogsWrapper mounted', () => {
                 });
 
                 it('should unmount second dialog component', () => {
-                    expect(wrapper.findComponent(SecondTestDialog).exists()).toBe(false);
+                    expect(secondDialog.exists()).toBe(false);
                 });
 
                 it('should not unmount first dialog component', () => {
-                    expect(wrapper.findComponent(FirstTestDialog).exists()).toBe(true);
+                    expect(dialog.exists()).toBe(true);
                 });
-            });
-        });
-
-        describe('when variant selected in first dialog', () => {
-            beforeEach(async () => {
-                const button = wrapper.findComponent(FirstTestDialog).find('button[name="true"]');
-                await button.trigger('click');
-            });
-
-            it('should resolve first dialog function promise', async () => {
-                await expect(firstResultPromise).resolves.toBe(true);
-            });
-
-            it('should unmount first dialog component', () => {
-                expect(wrapper.findComponent(FirstTestDialog).exists()).toBe(false);
-            });
-        });
-
-        describe('when cancel variant selected in first dialog', () => {
-            beforeEach(async () => {
-                const button = wrapper.findComponent(FirstTestDialog).find('button[name="cancel"]');
-                await button.trigger('click');
-            });
-
-            it('should reject first dialog function promise', async () => {
-                await expect(firstResultPromise).rejects.toEqual('cancel');
-            });
-
-            it('should unmount first dialog component', () => {
-                expect(wrapper.findComponent(FirstTestDialog).exists()).toBe(false);
             });
         });
     });
@@ -183,7 +166,7 @@ describe('when PromiseDialogsWrapper mounted', () => {
         describe('when dialog function called', () => {
             it('should throw error', () => {
                 expect(() => {
-                    firstTestDialogFunction({ text: 'test' }).catch(() => {
+                    testDialogFunction({ text: 'test' }).catch(() => {
                         // ignore
                     });
                 }).toThrowError('PromiseDialogsWrapper instance not found');
@@ -226,7 +209,7 @@ describe('when PromiseDialogsWrapper not mounted', () => {
     describe('when dialog function called', () => {
         it('should throw error', () => {
             expect(() => {
-                firstTestDialogFunction({ text: 'test' }).catch(() => {
+                testDialogFunction({ text: 'test' }).catch(() => {
                     // ignore
                 });
             }).toThrowError('PromiseDialogsWrapper instance not found');
