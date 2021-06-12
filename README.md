@@ -56,6 +56,15 @@ const openDialog = createPromiseDialog<{ text: string }, boolean>(BooleanDialog)
 const result: boolean = await openDialog({ text: 'Some text' });
 ```
 
+### Unmount delay
+
+By default, a dialog is unmounted immediately right after resolve/reject, but maybe you want to change this behaviour, for example, to play the close animation. 
+
+You have two options here:
+
+1. Specify the unmount delay (in ms) as a second argument in `createPromiseDialog` function.
+2. Specify the unmount delay (in ms) as a second argument when emitting `resolve`/`reject` event. This option will override `createPromiseDialog` argument if both are provided.
+
 ### Vue Class Component Example
 
 If you're using Vue Class Component to define your dialog components, you can extend them from `BasePromiseDialog`.

@@ -28,11 +28,11 @@ it('should accept params prop', () => {
 
 describe('resolve', () => {
     beforeEach(() => {
-        wrapper.vm.resolve(true);
+        wrapper.vm.resolve(true, 100);
     });
 
     it('should emit resolve event', () => {
-        expect(wrapper.emitted('resolve')).toEqual([[true]]);
+        expect(wrapper.emitted('resolve')).toEqual([[true, 100]]);
     });
 });
 
@@ -40,10 +40,10 @@ describe('reject', () => {
     const error = new Error();
 
     beforeEach(() => {
-        wrapper.vm.reject(error);
+        wrapper.vm.reject(error, 100);
     });
 
     it('should emit reject event', () => {
-        expect(wrapper.emitted('reject')).toEqual([[error]]);
+        expect(wrapper.emitted('reject')).toEqual([[error, 100]]);
     });
 });

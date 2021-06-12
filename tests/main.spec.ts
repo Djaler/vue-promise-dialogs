@@ -158,6 +158,122 @@ describe('when PromiseDialogsWrapper mounted', () => {
         });
     });
 
+    describe('when dialog function with delay called', () => {
+        const TestDialogWithDelays = Vue.extend({
+            template: `
+              <div>
+              <p>{{ params.text }}</p>
+              <button name="true" @click="$emit('resolve', true, 100)">True</button>
+              <button name="false" @click="$emit('resolve', false)">False</button>
+              <button name="cancel" @click="$emit('reject', 'cancel', 200)">Cancel</button>
+              </div>
+            `,
+            props: {
+                params: {
+                    type: Object,
+                    required: true,
+                },
+            },
+        });
+
+        const testDialogFunctionWithDelay = createPromiseDialog<{ text: string }, boolean>(TestDialogWithDelays, 300);
+
+        let resultPromise: Promise<boolean>;
+        let dialog: Wrapper<Vue>;
+
+        beforeEach(async () => {
+            resultPromise = testDialogFunctionWithDelay({ text: 'Test' });
+
+            await wrapper.vm.$nextTick();
+
+            dialog = wrapper.findComponent(TestDialogWithDelays);
+        });
+
+        afterEach(() => {
+            resultPromise.catch(() => {
+                // ignore
+            });
+        });
+
+        describe('when variant with delay selected in dialog', () => {
+            beforeEach(async () => {
+                jest.useFakeTimers();
+
+                const button = dialog.find('button[name="true"]');
+                await button.trigger('click');
+            });
+
+            afterEach(() => {
+                jest.useRealTimers();
+            });
+
+            it('should resolve dialog function promise', async () => {
+                await expect(resultPromise).resolves.toBe(true);
+            });
+
+            it('should unmount dialog component after delay', async () => {
+                expect(dialog.exists()).toBe(true);
+
+                jest.advanceTimersByTime(100);
+                await wrapper.vm.$nextTick();
+
+                expect(dialog.exists()).toBe(false);
+            });
+        });
+
+        describe('when variant without delay selected in dialog', () => {
+            beforeEach(async () => {
+                jest.useFakeTimers();
+
+                const button = dialog.find('button[name="true"]');
+                await button.trigger('click');
+            });
+
+            afterEach(() => {
+                jest.useRealTimers();
+            });
+
+            it('should resolve dialog function promise', async () => {
+                await expect(resultPromise).resolves.toBe(true);
+            });
+
+            it('should unmount dialog component after default dialog delay', async () => {
+                expect(dialog.exists()).toBe(true);
+
+                jest.advanceTimersByTime(300);
+                await wrapper.vm.$nextTick();
+
+                expect(dialog.exists()).toBe(false);
+            });
+        });
+
+        describe('when cancel variant selected in dialog', () => {
+            beforeEach(async () => {
+                jest.useFakeTimers();
+
+                const button = dialog.find('button[name="cancel"]');
+                await button.trigger('click');
+            });
+
+            afterEach(() => {
+                jest.useRealTimers();
+            });
+
+            it('should reject dialog function promise', async () => {
+                await expect(resultPromise).rejects.toEqual('cancel');
+            });
+
+            it('should unmount dialog component after delay', async () => {
+                expect(dialog.exists()).toBe(true);
+
+                jest.advanceTimersByTime(200);
+                await wrapper.vm.$nextTick();
+
+                expect(dialog.exists()).toBe(false);
+            });
+        });
+    });
+
     describe('when PromiseDialogsWrapper unmounted', () => {
         beforeEach(() => {
             wrapper.destroy();
