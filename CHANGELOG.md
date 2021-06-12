@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Djaler/vue-promise-dialogs/compare/v1.0.2...v1.1.0) (2021-06-12)
+
+
+### Features
+
+* add a way to delay dialog unmount ([8b30a3a](https://github.com/Djaler/vue-promise-dialogs/commit/8b30a3ac532025b13d1f1b8b9e9d98fe8e4cf15e))
+
 ### [1.0.2](https://github.com/Djaler/vue-promise-dialogs/compare/v1.0.1...v1.0.2) (2021-01-23)
 
 
