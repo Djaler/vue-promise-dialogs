@@ -6,6 +6,8 @@ interface OptionalValueWrapper<T> {
 
 interface PromiseDialogsWrapper {
     add<P, R>(component: RegularComponent, params: P, unmountDelay?: number): Promise<R>;
+
+    closeAll(reason: unknown, unmountDelay?: number): void;
 }
 
 export const promiseDialogsWrapper: OptionalValueWrapper<PromiseDialogsWrapper> = {};
