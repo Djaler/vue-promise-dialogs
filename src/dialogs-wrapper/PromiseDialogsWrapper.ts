@@ -68,6 +68,11 @@ export default Vue.extend({
                 unmount();
             }
         },
+        closeAll(reason: unknown, delay?: number) {
+            [...this.dialogsData].forEach(([id]) => {
+                this.onReject(id, reason, delay);
+            });
+        },
     },
     render(createElement): VNode {
         return createElement(

@@ -65,6 +65,12 @@ You have two options here:
 1. Specify the unmount delay (in ms) as a second argument in `createPromiseDialog` function.
 2. Specify the unmount delay (in ms) as a second argument when emitting `resolve`/`reject` event. This option will override `createPromiseDialog` argument if both are provided.
 
+### Close all
+
+In some cases you may want to close all opened dialogs. For example, on route change.
+
+You can use `closeAllDialogs` for this. All you need is to set a reason, which will be used in promises reject. 
+
 ### Vue Class Component Example
 
 If you're using Vue Class Component to define your dialog components, you can extend them from `BasePromiseDialog`.

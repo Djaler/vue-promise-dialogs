@@ -1,7 +1,7 @@
 import { mount, Wrapper } from '@vue/test-utils';
 import Vue from 'vue';
 
-import { createPromiseDialog, PromiseDialogsWrapper } from '@/index';
+import { closeAllDialogs, createPromiseDialog, PromiseDialogsWrapper } from '@/index';
 
 let wrapper: Wrapper<Vue>;
 
@@ -154,6 +154,46 @@ describe('when PromiseDialogsWrapper mounted', () => {
                 it('should not unmount first dialog component', () => {
                     expect(dialog.exists()).toBe(true);
                 });
+            });
+
+            describe('when closeAllDialogs called', () => {
+                const reason = 'reason';
+
+                beforeEach(() => {
+                    closeAllDialogs(reason);
+                });
+
+                it('should reject first dialog function promise', async () => {
+                    await expect(resultPromise).rejects.toEqual(reason);
+                });
+
+                it('should reject second dialog function promise', async () => {
+                    await expect(secondResultPromise).rejects.toEqual(reason);
+                });
+
+                it('should unmount first dialog component', () => {
+                    expect(dialog.exists()).toBe(false);
+                });
+
+                it('should unmount second dialog component', () => {
+                    expect(secondDialog.exists()).toBe(false);
+                });
+            });
+        });
+
+        describe('when closeAllDialogs called', () => {
+            const reason = 'reason';
+
+            beforeEach(() => {
+                closeAllDialogs(reason);
+            });
+
+            it('should reject dialog function promise', async () => {
+                await expect(resultPromise).rejects.toEqual(reason);
+            });
+
+            it('should unmount dialog component', () => {
+                expect(dialog.exists()).toBe(false);
             });
         });
     });
@@ -329,6 +369,13 @@ describe('when PromiseDialogsWrapper not mounted', () => {
                     // ignore
                 });
             }).toThrowError('PromiseDialogsWrapper instance not found');
+        });
+    });
+
+    describe('when closeAllDialogs called', () => {
+        it('should throw error', () => {
+            expect(() => closeAllDialogs('reason'))
+                .toThrowError('PromiseDialogsWrapper instance not found');
         });
     });
 });
