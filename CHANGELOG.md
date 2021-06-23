@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Djaler/vue-promise-dialogs/compare/v1.1.0...v1.2.0) (2021-06-23)
+
+
+### Features
+
+* add a way to force close and reject all dialogs ([bf1bdc5](https://github.com/Djaler/vue-promise-dialogs/commit/bf1bdc5b7f3bfbe9fcea8866e463d8611901fb3c))
+
 ## [1.1.0](https://github.com/Djaler/vue-promise-dialogs/compare/v1.0.2...v1.1.0) (2021-06-12)
 
 
