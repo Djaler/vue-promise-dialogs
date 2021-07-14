@@ -19,7 +19,7 @@ devDependencies:
   jest: 26.6.3
   lint-staged: 11.0.0
   simple-git-hooks: 2.5.1
-  standard-version: 9.3.0
+  standard-version: 9.3.1
   ts-jest: 26.5.3_jest@26.6.3+typescript@4.3.5
   ttypescript: 1.5.12_typescript@4.3.5
   typescript: 4.3.5
@@ -7212,7 +7212,7 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-gL//fkxfWUsIlFL2Tl42Cl6+HFALEaB1FU76I/Fy+oZjRreP7OPMXFlGbxM7NQsI0ZpUfw76sHnv0WNYuTb7Iw==
-  /standard-version/9.3.0:
+  /standard-version/9.3.1:
     dependencies:
       chalk: 2.4.2
       conventional-changelog: 3.1.24
@@ -7234,7 +7234,7 @@ packages:
       node: '>=10'
     hasBin: true
     resolution:
-      integrity: sha512-cYxxKXhYfI3S9+CA84HmrJa9B88H56V5FQ302iFF2TNwJukJCNoU8FgWt+11YtwKFXRkQQFpepC2QOF7aDq2Ow==
+      integrity: sha512-5qMxXw/FxLouC5nANyx/5RY1kiorJx9BppUso8gN07MG64q2uLRmrPb4KfXp3Ql4s/gxjZwZ89e0FwxeLubGww==
   /static-extend/0.1.2:
     dependencies:
       define-property: 0.2.5
@@ -8314,7 +8314,7 @@ specifiers:
   jest: 26.6.3
   lint-staged: 11.0.0
   simple-git-hooks: 2.5.1
-  standard-version: 9.3.0
+  standard-version: 9.3.1
   ts-jest: 26.5.3
   ttypescript: 1.5.12
   typescript: 4.3.5
