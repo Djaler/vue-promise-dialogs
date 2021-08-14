@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@djaler/conventional-changelog-standard": "1.2.0",
-    "@djaler/eslint-config-typescript": "0.0.5",
+    "@djaler/eslint-config-typescript": "0.0.6",
     "@jest/types": "26.6.2",
     "@rollup/plugin-replace": "2.3.4",
     "@stryker-mutator/api": "5.0.0",
