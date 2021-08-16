@@ -49,7 +49,7 @@
     "@stryker-mutator/api": "5.3.0",
     "@stryker-mutator/core": "5.3.0",
     "@stryker-mutator/jest-runner": "5.3.0",
-    "@types/jest": "26.0.20",
+    "@types/jest": "26.0.24",
     "@vue/test-utils": "1.1.2",
     "@zerollup/ts-transform-paths": "1.7.18",
     "agadoo": "2.0.0",

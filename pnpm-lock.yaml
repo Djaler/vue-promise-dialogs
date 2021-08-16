@@ -6,7 +6,7 @@ devDependencies:
   '@stryker-mutator/api': 5.3.0
   '@stryker-mutator/core': 5.3.0
   '@stryker-mutator/jest-runner': 5.3.0_76d50703266aa23f8398a42bef0df51f
-  '@types/jest': 26.0.20
+  '@types/jest': 26.0.24
   '@vue/test-utils': 1.1.2_ae554d8947d7e926b014dda25865f517
   '@zerollup/ts-transform-paths': 1.7.18_typescript@4.3.5
   agadoo: 2.0.0
@@ -1198,13 +1198,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nwKNbvnwJ2/mndE9ItP/zc2TCzw6uuodnF4EHYWD+gCQDVBuRQL5UzbZD0/ezy1iKsFU2ZQiDqg4M9dN4+wZgA==
-  /@types/jest/26.0.20:
+  /@types/jest/26.0.24:
     dependencies:
       jest-diff: 26.6.2
       pretty-format: 26.6.2
     dev: true
     resolution:
-      integrity: sha512-9zi2Y+5USJRxd0FsahERhBwlcvFh6D2GLQnY2FH2BzK8J9s9omvNHIbvABwIluXa0fD8XVKMLTO0aOEuUfACAA==
+      integrity: sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==
   /@types/json-schema/7.0.7:
     dev: true
     resolution:
@@ -4797,7 +4797,7 @@ packages:
       integrity: sha512-t5qdIj/bCj2j7NFVHb2nFB4aUdfucDn3JRKgrZnplb8nieAirAzRSHP8uDEd+qV6ygzg9Pz4YG7UTJf94LPSyg==
   /jest-diff/26.6.2:
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.1
       diff-sequences: 26.6.2
       jest-get-type: 26.3.0
       pretty-format: 26.6.2
@@ -8560,7 +8560,7 @@ specifiers:
   '@stryker-mutator/api': 5.3.0
   '@stryker-mutator/core': 5.3.0
   '@stryker-mutator/jest-runner': 5.3.0
-  '@types/jest': 26.0.20
+  '@types/jest': 26.0.24
   '@vue/test-utils': 1.1.2
   '@zerollup/ts-transform-paths': 1.7.18
   agadoo: 2.0.0
