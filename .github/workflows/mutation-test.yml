@@ -25,10 +25,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
       - name: Install dependencies
-        uses: pnpm/action-setup@v1.2.1
-        with:
-          version: 5
-          run_install: true
+        run: corepack pnpm install
       - name: Run Stryker
         run: npm run stryker -- --reporters dashboard --dashboard.reportType full
         env:

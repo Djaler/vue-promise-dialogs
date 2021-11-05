@@ -38,6 +38,7 @@
   "exports": "./dist/vue-promise-dialogs.es.js",
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
+  "packageManager": "pnpm@5.18.10",
   "peerDependencies": {
     "vue": "^2.6.4"
   },
