@@ -1,8 +1,5 @@
 {
   "extends": [
     "github>djaler/renovate-config:js"
-  ],
-  "constraints": {
-    "pnpm": "5"
-  }
+  ]
 }
