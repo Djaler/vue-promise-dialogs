@@ -20,13 +20,10 @@ jobs:
           node-version: 16.9
       - name: Cache pnpm modules
         uses: actions/cache@v2
-        env:
-          cache-name: cache-pnpm-modules
         with:
           path: ~/.pnpm-store
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-
       - name: Install dependencies
         run: corepack pnpm install
       - uses: filipstefansson/set-npm-token-action@v1
