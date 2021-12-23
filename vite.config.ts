@@ -1,6 +1,6 @@
 import replace from '@rollup/plugin-replace';
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 import packageJson from './package.json';
 
@@ -17,9 +17,16 @@ export default defineConfig({
         minify: false,
     },
     plugins: [
-        tsconfigPaths(),
         replace({
             'Vue.extend': '/*#__PURE__*/ Vue.extend',
         }),
     ],
+    resolve: {
+        alias: [
+            {
+                find: /^@\/(.*)/,
+                replacement: `${resolve(__dirname, 'src')}/$1`,
+            },
+        ],
+    },
 });
