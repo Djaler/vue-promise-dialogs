@@ -26,7 +26,6 @@ specifiers:
   ttypescript: 1.5.12
   typescript: 4.4.2
   vite: 2.7.6
-  vite-tsconfig-paths: 3.3.13
   vue: 2.6.12
   vue-class-component: 7.2.6
   vue-property-decorator: 9.1.2
@@ -58,7 +57,6 @@ devDependencies:
   ttypescript: 1.5.12_typescript@4.4.2
   typescript: 4.4.2
   vite: 2.7.6
-  vite-tsconfig-paths: 3.3.13_vite@2.7.6
   vue: 2.6.12
   vue-class-component: 7.2.6_vue@2.6.12
   vue-property-decorator: 9.1.2_2dc4252c5371093c9ebcca71536ac4e9
@@ -558,10 +556,6 @@ packages:
     dependencies:
       exec-sh: 0.3.4
       minimist: 1.2.5
-    dev: true
-
-  /@cush/relative/1.0.0:
-    resolution: {integrity: sha512-RpfLEtTlyIxeNPGKcokS+p3BZII/Q3bYxryFRglh5H3A3T8q9fsLYm72VYAMEOOIBLEa8o93kFLiBDUWKrwXZA==}
     dev: true
 
   /@djaler/conventional-changelog-standard/1.2.0:
@@ -3725,10 +3719,6 @@ packages:
       is-glob: 4.0.1
     dev: true
 
-  /glob-regex/0.3.2:
-    resolution: {integrity: sha512-m5blUd3/OqDTWwzBBtWBPrGlAzatRywHameHeekAZyZrskYouOGdNB8T/q6JucucvJXtOuyHIn0/Yia7iDasDw==}
-    dev: true
-
   /glob/7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
     dependencies:
@@ -3773,10 +3763,6 @@ packages:
       ignore: 5.1.8
       merge2: 1.4.1
       slash: 3.0.0
-    dev: true
-
-  /globrex/0.1.2:
-    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
     dev: true
 
   /got/8.3.2:
@@ -6415,15 +6401,6 @@ packages:
       resolve: 1.20.0
     dev: true
 
-  /recrawl-sync/2.2.1:
-    resolution: {integrity: sha512-A2yLDgeXNaduJJMlqyUdIN7fewopnNm/mVeeGytS1d2HLXKpS5EthQ0j8tWeX+as9UXiiwQRwfoslKC+/gjqxg==}
-    dependencies:
-      '@cush/relative': 1.0.0
-      glob-regex: 0.3.2
-      slash: 3.0.0
-      tslib: 1.14.1
-    dev: true
-
   /redent/1.0.0:
     resolution: {integrity: sha1-z5Fqsf1fHxbfsggi3W7H9zDCr94=}
     engines: {node: '>=0.10.0'}
@@ -7710,20 +7687,6 @@ packages:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
-    dev: true
-
-  /vite-tsconfig-paths/3.3.13_vite@2.7.6:
-    resolution: {integrity: sha512-G7OO+1g2H6xVN61RIp1xFjvciqJoF5cGKcWfP6ZOZFeA8QRy2X7yaGUZLhXtKxNLEsR2MthDm7KwSNTKQHzwvA==}
-    peerDependencies:
-      vite: '>2.0.0-0'
-    dependencies:
-      debug: 4.3.1
-      globrex: 0.1.2
-      recrawl-sync: 2.2.1
-      tsconfig-paths: 3.9.0
-      vite: 2.7.6
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /vite/2.7.6:
