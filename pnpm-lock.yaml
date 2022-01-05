@@ -12,7 +12,7 @@ specifiers:
   '@vue/test-utils': 1.1.2
   '@zerollup/ts-transform-paths': 1.7.18
   agadoo: 2.0.0
-  clean-publish: 2.2.0
+  clean-publish: 3.4.5
   conventional-github-releaser: 3.1.5
   copyfiles: 2.4.1
   es-check: 5.2.0
@@ -43,7 +43,7 @@ devDependencies:
   '@vue/test-utils': 1.1.2_ae554d8947d7e926b014dda25865f517
   '@zerollup/ts-transform-paths': 1.7.18_typescript@4.4.2
   agadoo: 2.0.0
-  clean-publish: 2.2.0
+  clean-publish: 3.4.5
   conventional-github-releaser: 3.1.5
   copyfiles: 2.4.1
   es-check: 5.2.0
@@ -1485,11 +1485,6 @@ packages:
     resolution: {integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=}
     dev: true
 
-  /at-least-node/1.0.0:
-    resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
-    engines: {node: '>= 4.0.0'}
-    dev: true
-
   /atob/2.1.2:
     resolution: {integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==}
     engines: {node: '>= 4.5.0'}
@@ -1864,14 +1859,16 @@ packages:
       static-extend: 0.1.2
     dev: true
 
-  /clean-publish/2.2.0:
-    resolution: {integrity: sha512-U+/Y5YXbxnqWlh8y/toKSEGbMvIvsgfkfJ7yK0v0uQ1mz07lNNSxceY7XaFweEw8LFQo8Al3H7SuQHXbf5Xw8g==}
-    engines: {node: ^10.17.0 || ^12.0.0 || >=14.0.0}
+  /clean-publish/3.4.5:
+    resolution: {integrity: sha512-wxtaEqCy/B7lch+bpTPmx9wI8owTODa619UOVA1XfyNaM2bjwv1SkR1IJNDA6rtf89bjiz6UkpfU5HcEL8YJIw==}
+    engines: {node: ^12.0.0 || ^14.0.0 || >= 16.0.0}
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
-      fs-extra: 9.1.0
-      lilconfig: 2.0.2
+      fast-glob: 3.2.7
+      fs-extra: 10.0.0
+      hosted-git-info: 4.0.2
+      lilconfig: 2.0.4
     dev: true
 
   /clean-stack/2.2.0:
@@ -3347,8 +3344,8 @@ packages:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
     dev: true
 
-  /fast-glob/3.2.5:
-    resolution: {integrity: sha512-2DtFcgT68wiTTiwZ2hNdJfcHNke9XOfnwmBRWXhmeKM8rF0TGwmC/Qto3S7RoZKp5cilZbxzO5iTNTQsJ+EeDg==}
+  /fast-glob/3.2.7:
+    resolution: {integrity: sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q==}
     engines: {node: '>=8'}
     dependencies:
       '@nodelib/fs.stat': 2.0.4
@@ -3356,7 +3353,6 @@ packages:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.4
-      picomatch: 2.2.3
     dev: true
 
   /fast-json-stable-stringify/2.1.0:
@@ -3516,6 +3512,15 @@ packages:
       null-check: 1.0.0
     dev: true
 
+  /fs-extra/10.0.0:
+    resolution: {integrity: sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      graceful-fs: 4.2.6
+      jsonfile: 6.1.0
+      universalify: 2.0.0
+    dev: true
+
   /fs-extra/8.1.0:
     resolution: {integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==}
     engines: {node: '>=6 <7 || >=8'}
@@ -3523,16 +3528,6 @@ packages:
       graceful-fs: 4.2.6
       jsonfile: 4.0.0
       universalify: 0.1.2
-    dev: true
-
-  /fs-extra/9.1.0:
-    resolution: {integrity: sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==}
-    engines: {node: '>=10'}
-    dependencies:
-      at-least-node: 1.0.0
-      graceful-fs: 4.2.6
-      jsonfile: 6.1.0
-      universalify: 2.0.0
     dev: true
 
   /fs.realpath/1.0.0:
@@ -3759,7 +3754,7 @@ packages:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.2.5
+      fast-glob: 3.2.7
       ignore: 5.1.8
       merge2: 1.4.1
       slash: 3.0.0
@@ -5079,8 +5074,8 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /lilconfig/2.0.2:
-    resolution: {integrity: sha512-4zUThttj8TQ4N7Pps92Z79jPf1OMcll4m61pivQSVk5MT78hVhNa2LrKTuNYD0AGLpmpf7zeIKOxSt6hHBfypw==}
+  /lilconfig/2.0.4:
+    resolution: {integrity: sha512-bfTIN7lEsiooCocSISTWXkiWJkRqtL9wYtYy+8EK3Y41qh3mpwPU0ycTOgjdY9ErwXCc8QyrQp82bdL0Xkm9yA==}
     engines: {node: '>=10'}
     dev: true
 
