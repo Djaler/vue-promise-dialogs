@@ -18,6 +18,7 @@ specifiers:
   es-check: 5.2.4
   eslint: 7.32.0
   eslint-import-resolver-typescript: 2.4.0
+  is-ci: 3.0.1
   jest: 26.6.3
   nano-staged: 0.5.0
   simple-git-hooks: 2.7.0
@@ -49,6 +50,7 @@ devDependencies:
   es-check: 5.2.4
   eslint: 7.32.0
   eslint-import-resolver-typescript: 2.4.0_eslint@7.32.0
+  is-ci: 3.0.1
   jest: 26.6.3
   nano-staged: 0.5.0
   simple-git-hooks: 2.7.0
@@ -1799,6 +1801,10 @@ packages:
 
   /ci-info/2.0.0:
     resolution: {integrity: sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==}
+    dev: true
+
+  /ci-info/3.3.0:
+    resolution: {integrity: sha512-riT/3vI5YpVH6/qomlDnJow6TBee2PBKSEpx3O32EGPYbWGIRsIlGRms3Sm74wYE1JMo8RnO04Hb12+v1J5ICw==}
     dev: true
 
   /cjs-module-lexer/0.6.0:
@@ -4030,6 +4036,13 @@ packages:
     hasBin: true
     dependencies:
       ci-info: 2.0.0
+    dev: true
+
+  /is-ci/3.0.1:
+    resolution: {integrity: sha512-ZYvCgrefwqoQ6yTyYUbQu64HsITZ3NfKX1lzaEYdkTDcfKzzCI/wthRRYKkdjHKFVgNiXKAKm65Zo1pk2as/QQ==}
+    hasBin: true
+    dependencies:
+      ci-info: 3.3.0
     dev: true
 
   /is-core-module/2.2.0:

@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "is-ci || npx simple-git-hooks",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
@@ -60,6 +61,7 @@
     "es-check": "5.2.4",
     "eslint": "7.32.0",
     "eslint-import-resolver-typescript": "2.4.0",
+    "is-ci": "3.0.1",
     "jest": "26.6.3",
     "nano-staged": "0.5.0",
     "simple-git-hooks": "2.7.0",
