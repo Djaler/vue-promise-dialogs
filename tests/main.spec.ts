@@ -1,19 +1,21 @@
 import { mount, Wrapper } from '@vue/test-utils';
+import { beforeEach, describe, expect, it, vitest } from 'vitest';
 import Vue from 'vue';
+import { compileToFunctions } from 'vue-template-compiler';
 
 import { closeAllDialogs, createPromiseDialog, PromiseDialogsWrapper } from '@/index';
 
 let wrapper: Wrapper<Vue>;
 
 const TestDialog = Vue.extend({
-    template: `
+    ...compileToFunctions(`
       <div>
       <p>{{ params.text }}</p>
       <button name="true" @click="$emit('resolve', true)">True</button>
       <button name="false" @click="$emit('resolve', false)">False</button>
       <button name="cancel" @click="$emit('reject', 'cancel')">Cancel</button>
       </div>
-    `,
+    `),
     props: {
         params: {
             type: Object,
@@ -34,16 +36,16 @@ describe('when PromiseDialogsWrapper mounted', () => {
                     default: null,
                 },
             },
-            template: `
+            ...compileToFunctions(`
               <div>
               <PromiseDialogsWrapper :unmount-delay="unmountDelay"/>
               </div>
-            `,
+            `),
         });
-    });
 
-    afterEach(() => {
-        wrapper.destroy();
+        return () => {
+            wrapper.destroy();
+        };
     });
 
     it('should have correct name', () => {
@@ -60,12 +62,12 @@ describe('when PromiseDialogsWrapper mounted', () => {
             await wrapper.vm.$nextTick();
 
             dialog = wrapper.findComponent(TestDialog);
-        });
 
-        afterEach(() => {
-            resultPromise.catch(() => {
-                // ignore
-            });
+            return () => {
+                resultPromise.catch(() => {
+                    // ignore
+                });
+            };
         });
 
         it('should mount dialog component', () => {
@@ -112,12 +114,12 @@ describe('when PromiseDialogsWrapper mounted', () => {
                 await wrapper.vm.$nextTick();
 
                 secondDialog = wrapper.findAllComponents(TestDialog).at(1);
-            });
 
-            afterEach(() => {
-                secondResultPromise.catch(() => {
-                    // ignore
-                });
+                return () => {
+                    secondResultPromise.catch(() => {
+                        // ignore
+                    });
+                };
             });
 
             it('should mount second dialog component', () => {
@@ -206,14 +208,14 @@ describe('when PromiseDialogsWrapper mounted', () => {
 
     describe('when dialog function with delay called', () => {
         const TestDialogWithDelays = Vue.extend({
-            template: `
+            ...compileToFunctions(`
               <div>
               <p>{{ params.text }}</p>
               <button name="true" @click="$emit('resolve', true, 100)">True</button>
               <button name="false" @click="$emit('resolve', false)">False</button>
               <button name="cancel" @click="$emit('reject', 'cancel', 200)">Cancel</button>
               </div>
-            `,
+            `),
             props: {
                 params: {
                     type: Object,
@@ -237,24 +239,24 @@ describe('when PromiseDialogsWrapper mounted', () => {
             await wrapper.vm.$nextTick();
 
             dialog = wrapper.findComponent(TestDialogWithDelays);
-        });
 
-        afterEach(() => {
-            resultPromise.catch(() => {
-                // ignore
-            });
+            return () => {
+                resultPromise.catch(() => {
+                    // ignore
+                });
+            };
         });
 
         describe('when variant with delay selected in dialog', () => {
             beforeEach(async () => {
-                jest.useFakeTimers();
+                vitest.useFakeTimers();
 
                 const button = dialog.find('button[name="true"]');
                 await button.trigger('click');
-            });
 
-            afterEach(() => {
-                jest.useRealTimers();
+                return () => {
+                    vitest.useRealTimers();
+                };
             });
 
             it('should resolve dialog function promise', async () => {
@@ -264,7 +266,7 @@ describe('when PromiseDialogsWrapper mounted', () => {
             it('should unmount dialog component after delay', async () => {
                 expect(dialog.exists()).toBe(true);
 
-                jest.advanceTimersByTime(100);
+                vitest.advanceTimersByTime(100);
                 await wrapper.vm.$nextTick();
 
                 expect(dialog.exists()).toBe(false);
@@ -273,14 +275,14 @@ describe('when PromiseDialogsWrapper mounted', () => {
 
         describe('when variant without delay selected in dialog', () => {
             beforeEach(async () => {
-                jest.useFakeTimers();
+                vitest.useFakeTimers();
 
                 const button = dialog.find('button[name="true"]');
                 await button.trigger('click');
-            });
 
-            afterEach(() => {
-                jest.useRealTimers();
+                return () => {
+                    vitest.useRealTimers();
+                };
             });
 
             it('should resolve dialog function promise', async () => {
@@ -290,7 +292,7 @@ describe('when PromiseDialogsWrapper mounted', () => {
             it('should unmount dialog component after default dialog delay', async () => {
                 expect(dialog.exists()).toBe(true);
 
-                jest.advanceTimersByTime(300);
+                vitest.advanceTimersByTime(300);
                 await wrapper.vm.$nextTick();
 
                 expect(dialog.exists()).toBe(false);
@@ -299,14 +301,14 @@ describe('when PromiseDialogsWrapper mounted', () => {
 
         describe('when cancel variant selected in dialog', () => {
             beforeEach(async () => {
-                jest.useFakeTimers();
+                vitest.useFakeTimers();
 
                 const button = dialog.find('button[name="cancel"]');
                 await button.trigger('click');
-            });
 
-            afterEach(() => {
-                jest.useRealTimers();
+                return () => {
+                    vitest.useRealTimers();
+                };
             });
 
             it('should reject dialog function promise', async () => {
@@ -316,7 +318,7 @@ describe('when PromiseDialogsWrapper mounted', () => {
             it('should unmount dialog component after delay', async () => {
                 expect(dialog.exists()).toBe(true);
 
-                jest.advanceTimersByTime(200);
+                vitest.advanceTimersByTime(200);
                 await wrapper.vm.$nextTick();
 
                 expect(dialog.exists()).toBe(false);
@@ -341,28 +343,28 @@ describe('when PromiseDialogsWrapper mounted', () => {
     });
 
     describe('when another PromiseDialogsWrapper mounted', () => {
-        const originalConsoleError = console.error;
-        const mockedConsoleError = jest.fn();
+        const mockedConsoleError = vitest.fn();
 
         let anotherWrapper: Wrapper<Vue>;
 
         beforeEach(() => {
+            const originalConsoleError = console.error;
             console.error = mockedConsoleError;
 
             anotherWrapper = mount({
                 components: { PromiseDialogsWrapper },
-                template: `
+                ...compileToFunctions(`
                   <div>
                   <PromiseDialogsWrapper/>
                   </div>
-                `,
+                `),
             });
-        });
 
-        afterEach(() => {
-            anotherWrapper.destroy();
+            return () => {
+                anotherWrapper.destroy();
 
-            console.error = originalConsoleError;
+                console.error = originalConsoleError;
+            };
         });
 
         it('should log error', () => {

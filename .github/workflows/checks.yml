@@ -70,8 +70,4 @@ jobs:
       - name: Install dependencies
         run: corepack pnpm install
       - name: Run tests
-        uses: mattallty/jest-github-action@v1.0.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          test-command: "npm run test"
+        run: npm run test

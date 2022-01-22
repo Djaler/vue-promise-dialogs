@@ -1,6 +1,5 @@
 [![npm](https://img.shields.io/npm/v/vue-promise-dialogs?style=for-the-badge)](https://www.npmjs.com/package/vue-promise-dialogs)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/vue-promise-dialogs?style=for-the-badge)](https://bundlephobia.com/result?p=vue-promise-dialogs)
-[![Mutation testing badge](https://img.shields.io/endpoint?style=for-the-badge&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FDjaler%2Fvue-promise-dialogs%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/Djaler/vue-promise-dialogs/master)
 
 # Vue Promise Dialogs
 
