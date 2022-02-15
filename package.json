@@ -28,7 +28,7 @@
     "prerelease": "npm run lint && npm run test && npm run build",
     "release": "standard-version --preset @djaler/standard",
     "release:github": "conventional-github-releaser --preset @djaler/standard",
-    "publish": "npm run build && clean-publish"
+    "publish": "clean-publish"
   },
   "files": [
     "dist"

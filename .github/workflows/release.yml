@@ -29,6 +29,8 @@ jobs:
       - uses: filipstefansson/set-npm-token-action@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
+      - name: Build package
+        run: npm run build
       - name: Publish package
         run: npm run publish
       - name: Create github release
