@@ -13,6 +13,12 @@ interface DialogData<P, R> {
 
 export default Vue.extend({
     name: 'PromiseDialogsWrapper',
+    props: {
+        unmountDelay: {
+            type: Number,
+            default: 0,
+        },
+    },
     data() {
         return {
             dialogsData: new Map<symbol, DialogData<any, any>>(),
@@ -64,6 +70,8 @@ export default Vue.extend({
             };
             if (delay) {
                 setTimeout(unmount, delay);
+            } else if (this.unmountDelay) {
+                setTimeout(unmount, this.unmountDelay);
             } else {
                 unmount();
             }

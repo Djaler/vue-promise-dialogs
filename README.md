@@ -62,8 +62,8 @@ By default, a dialog is unmounted immediately right after resolve/reject, but ma
 
 You have two options here:
 
-1. Specify the unmount delay (in ms) as a second argument in `createPromiseDialog` function.
-2. Specify the unmount delay (in ms) as a second argument when emitting `resolve`/`reject` event. This option will override `createPromiseDialog` argument if both are provided.
+1. Specify the unmount delay (in ms) using `unmountDelay` prop in `PromiseDialogsWrapper`.
+2. Specify the unmount delay (in ms) as a second argument when emitting `resolve`/`reject` event. This option will override `unmountDelay` prop if both are provided.
 
 ### Close all
 

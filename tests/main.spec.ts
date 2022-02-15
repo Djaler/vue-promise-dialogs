@@ -28,9 +28,15 @@ describe('when PromiseDialogsWrapper mounted', () => {
     beforeEach(() => {
         wrapper = mount({
             components: { PromiseDialogsWrapper },
+            props: {
+                unmountDelay: {
+                    type: Number,
+                    default: null,
+                },
+            },
             template: `
               <div>
-              <PromiseDialogsWrapper/>
+              <PromiseDialogsWrapper :unmount-delay="unmountDelay"/>
               </div>
             `,
         });
@@ -216,12 +222,16 @@ describe('when PromiseDialogsWrapper mounted', () => {
             },
         });
 
-        const testDialogFunctionWithDelay = createPromiseDialog<{ text: string }, boolean>(TestDialogWithDelays, 300);
+        const testDialogFunctionWithDelay = createPromiseDialog<{ text: string }, boolean>(TestDialogWithDelays);
 
         let resultPromise: Promise<boolean>;
         let dialog: Wrapper<Vue>;
 
         beforeEach(async () => {
+            await wrapper.setProps({
+                unmountDelay: 300,
+            });
+
             resultPromise = testDialogFunctionWithDelay({ text: 'Test' });
 
             await wrapper.vm.$nextTick();
