@@ -17,7 +17,7 @@ specifiers:
   copyfiles: 2.4.1
   es-check: 5.2.4
   eslint: 7.32.0
-  eslint-import-resolver-typescript: 2.4.0
+  eslint-import-resolver-typescript: 2.5.0
   jest: 26.6.3
   nano-staged: 0.5.0
   simple-git-hooks: 2.7.0
@@ -48,7 +48,7 @@ devDependencies:
   copyfiles: 2.4.1
   es-check: 5.2.4
   eslint: 7.32.0
-  eslint-import-resolver-typescript: 2.4.0_eslint@7.32.0
+  eslint-import-resolver-typescript: 2.5.0_eslint@7.32.0
   jest: 26.6.3
   nano-staged: 0.5.0
   simple-git-hooks: 2.7.0
@@ -2926,8 +2926,8 @@ packages:
       resolve: 1.20.0
     dev: true
 
-  /eslint-import-resolver-typescript/2.4.0_eslint@7.32.0:
-    resolution: {integrity: sha512-useJKURidCcldRLCNKWemr1fFQL1SzB3G4a0li6lFGvlc5xGe1hY343bvG07cbpCzPuM/lK19FIJB3XGFSkplA==}
+  /eslint-import-resolver-typescript/2.5.0_eslint@7.32.0:
+    resolution: {integrity: sha512-qZ6e5CFr+I7K4VVhQu3M/9xGv9/YmwsEXrsm3nimw8vWaVHRDrQRp26BgCypTxBp3vUp4o5aVEJRiy0F2DFddQ==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: '*'
@@ -2935,7 +2935,7 @@ packages:
     dependencies:
       debug: 4.3.1
       eslint: 7.32.0
-      glob: 7.1.6
+      glob: 7.2.0
       is-glob: 4.0.1
       resolve: 1.20.0
       tsconfig-paths: 3.9.0
