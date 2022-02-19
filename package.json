@@ -76,7 +76,7 @@
   "simple-git-hooks": {
     "pre-commit": "./node_modules/.bin/simple-git-hooks && ./node_modules/.bin/nano-staged"
   },
-  "lint-staged": {
+  "nano-staged": {
     "*.{js,ts}": "eslint --fix"
   }
 }
