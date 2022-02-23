@@ -5,9 +5,9 @@ specifiers:
   '@djaler/eslint-config-typescript': 0.0.7
   '@jest/types': 26.6.2
   '@rollup/plugin-replace': 2.3.4
-  '@stryker-mutator/api': 5.6.0
-  '@stryker-mutator/core': 5.6.0
-  '@stryker-mutator/jest-runner': 5.6.0
+  '@stryker-mutator/api': 5.6.1
+  '@stryker-mutator/core': 5.6.1
+  '@stryker-mutator/jest-runner': 5.6.1
   '@types/jest': 26.0.20
   '@vue/test-utils': 1.3.0
   '@zerollup/ts-transform-paths': 1.7.18
@@ -36,9 +36,9 @@ devDependencies:
   '@djaler/eslint-config-typescript': 0.0.7_eslint@7.32.0+typescript@4.4.2
   '@jest/types': 26.6.2
   '@rollup/plugin-replace': 2.3.4
-  '@stryker-mutator/api': 5.6.0
-  '@stryker-mutator/core': 5.6.0
-  '@stryker-mutator/jest-runner': 5.6.0_03c7780f8883148047c6f202cc15aea5
+  '@stryker-mutator/api': 5.6.1
+  '@stryker-mutator/core': 5.6.1
+  '@stryker-mutator/jest-runner': 5.6.1_92f9b2e214190f75f23e262b6dd74b1d
   '@types/jest': 26.0.20
   '@vue/test-utils': 1.3.0_ae554d8947d7e926b014dda25865f517
   '@zerollup/ts-transform-paths': 1.7.18_typescript@4.4.2
@@ -96,7 +96,7 @@ packages:
       '@babel/traverse': 7.16.3
       '@babel/types': 7.16.0
       convert-source-map: 1.7.0
-      debug: 4.3.1
+      debug: 4.3.3
       gensync: 1.0.0-beta.2
       json5: 2.2.0
       semver: 6.3.0
@@ -494,7 +494,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.16.0
       '@babel/parser': 7.16.4
       '@babel/types': 7.16.0
-      debug: 4.3.1
+      debug: 4.3.3
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -559,7 +559,7 @@ packages:
     engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.1
+      debug: 4.3.3
       espree: 7.3.1
       globals: 13.10.0
       ignore: 4.0.6
@@ -576,7 +576,7 @@ packages:
     engines: {node: '>=10.10.0'}
     dependencies:
       '@humanwhocodes/object-schema': 1.2.0
-      debug: 4.3.1
+      debug: 4.3.3
       minimatch: 3.0.4
     transitivePeerDependencies:
       - supports-color
@@ -847,8 +847,8 @@ packages:
       '@sinonjs/commons': 1.8.2
     dev: true
 
-  /@stryker-mutator/api/5.6.0:
-    resolution: {integrity: sha512-3SJk2niEym3IocuWOK5hA1ubUyKu9qeuX2Rv6/twS9g5YeewNjVN66/NwfqsRJLLCEmeCRzqcQRsWFsrmsTxZA==}
+  /@stryker-mutator/api/5.6.1:
+    resolution: {integrity: sha512-VMsyi6EATGw69RvsS5ObR1Eh8Dz6XbsESA9VHTOF5xXSTob9ZVj2okmgBo/QPh54Rafdl7W75yhNxI3mDz58Kw==}
     engines: {node: '>=12'}
     dependencies:
       mutation-testing-metrics: 1.7.8
@@ -856,14 +856,14 @@ packages:
       tslib: 2.3.0
     dev: true
 
-  /@stryker-mutator/core/5.6.0:
-    resolution: {integrity: sha512-8ejDQNh4ETSo0ObAxPgAR1/qu7+7FxTSySvO1jjjFg6aO70bNe6a7MxHUsZUZEwIAE9IaY+bK5sImIbx4qPuoQ==}
+  /@stryker-mutator/core/5.6.1:
+    resolution: {integrity: sha512-CgnFtZ5TvFDqOPpnP36YwmSZ4r2jh7i469CUpNZWmHUs6agkbUHbaPefjJzL4SqC4uJDvzZcofhZiZbf68fPLQ==}
     engines: {node: '>=12.17'}
     hasBin: true
     dependencies:
-      '@stryker-mutator/api': 5.6.0
-      '@stryker-mutator/instrumenter': 5.6.0
-      '@stryker-mutator/util': 5.6.0
+      '@stryker-mutator/api': 5.6.1
+      '@stryker-mutator/instrumenter': 5.6.1
+      '@stryker-mutator/util': 5.6.1
       ajv: 8.8.2
       chalk: 4.1.1
       commander: 8.3.0
@@ -874,7 +874,7 @@ packages:
       inquirer: 8.2.0
       lodash.flatmap: 4.5.0
       lodash.groupby: 4.6.0
-      log4js: 6.2.1
+      log4js: 6.4.1
       minimatch: 3.0.4
       mkdirp: 1.0.4
       mutation-testing-elements: 1.7.8
@@ -893,8 +893,8 @@ packages:
       - supports-color
     dev: true
 
-  /@stryker-mutator/instrumenter/5.6.0:
-    resolution: {integrity: sha512-DRYCaLnmBZrt69bZ3BXEZHGZdSfcFhzRVZWtCKIwmkfW6V8zrHaM+SKPf/hXFebI0rXfTz7kVa6TnblsDyWLVw==}
+  /@stryker-mutator/instrumenter/5.6.1:
+    resolution: {integrity: sha512-+aeF8uyIScZ5r9g8h1uqd/lscOif5KLu9zn4/dgVAEAM2kNYHBNc4y4cxOjzjOEOSrhrEDP1Mn3q4/kfrSXEEw==}
     engines: {node: '>=12'}
     dependencies:
       '@babel/core': 7.16.0
@@ -904,31 +904,31 @@ packages:
       '@babel/plugin-proposal-decorators': 7.16.4_@babel+core@7.16.0
       '@babel/plugin-proposal-private-methods': 7.16.0_@babel+core@7.16.0
       '@babel/preset-typescript': 7.16.0_@babel+core@7.16.0
-      '@stryker-mutator/api': 5.6.0
-      '@stryker-mutator/util': 5.6.0
+      '@stryker-mutator/api': 5.6.1
+      '@stryker-mutator/util': 5.6.1
       angular-html-parser: 1.8.0
       weapon-regex: 0.6.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@stryker-mutator/jest-runner/5.6.0_03c7780f8883148047c6f202cc15aea5:
-    resolution: {integrity: sha512-dzTeoHLu82v3DdCHN2eExVSEpoN6XEv6h7LB6VnklkF2fomxo77t8Q9xoxzkHBUKK8eV7FUlGVC8j/1/j3ECXQ==}
+  /@stryker-mutator/jest-runner/5.6.1_92f9b2e214190f75f23e262b6dd74b1d:
+    resolution: {integrity: sha512-5jDk56nlWyv/8Y4PZFAr9f0nk9H8LKv5trT2wKZc08SFaxbVMas2qbbyrvd0gD8tfwsc0IpNiLqa9I41efqxUw==}
     engines: {node: '>=12'}
     peerDependencies:
       '@stryker-mutator/core': ~5.6.0
       jest: '>= 22.0.0'
     dependencies:
-      '@stryker-mutator/api': 5.6.0
-      '@stryker-mutator/core': 5.6.0
-      '@stryker-mutator/util': 5.6.0
+      '@stryker-mutator/api': 5.6.1
+      '@stryker-mutator/core': 5.6.1
+      '@stryker-mutator/util': 5.6.1
       jest: 26.6.3
       semver: 7.3.5
       tslib: 2.3.0
     dev: true
 
-  /@stryker-mutator/util/5.6.0:
-    resolution: {integrity: sha512-r7dwuxWedO4VXSUKprC3ayiKlM+3jiebaGdAjOXgbbAPIelpBvLioZzkf9koxGHPl47UubJfWIYs3Cbxg41E8w==}
+  /@stryker-mutator/util/5.6.1:
+    resolution: {integrity: sha512-Tdw/nqSkB0zJ+tivlB+WWN+Byj8p8BJeJwFmw2aW1C13J7Dt4c9OQTATOZJ9cKaVpPwoLPsN5d7XurRewDQ7gA==}
     dependencies:
       lodash.flatmap: 4.5.0
     dev: true
@@ -1124,7 +1124,7 @@ packages:
     dependencies:
       '@typescript-eslint/types': 4.18.0
       '@typescript-eslint/visitor-keys': 4.18.0
-      debug: 4.3.1
+      debug: 4.3.3
       globby: 11.0.2
       is-glob: 4.0.1
       semver: 7.3.5
@@ -2379,13 +2379,8 @@ packages:
       whatwg-url: 8.4.0
     dev: true
 
-  /date-format/2.1.0:
-    resolution: {integrity: sha512-bYQuGLeFxhkxNOF3rcMtiZxvCBAquGzZm6oWA1oZ0g2THUzivaRhv8uOhdr19LmoobSOLoIAxeUK2RdbM8IFTA==}
-    engines: {node: '>=4.0'}
-    dev: true
-
-  /date-format/3.0.0:
-    resolution: {integrity: sha512-eyTcpKOcamdhWJXj56DpQMo1ylSQpcGtGKXcU0Tb97+K56/CF5amAqqqNj0+KvA0iw2ynxtHWFsPDSClCxe48w==}
+  /date-format/4.0.3:
+    resolution: {integrity: sha512-7P3FyqDcfeznLZp2b+OMitV9Sz2lUnsT87WaTat9nVwqsBkTzPG3lPLNwW3en6F4pHUiWzr6vb8CLhjdK9bcxQ==}
     engines: {node: '>=4.0'}
     dev: true
 
@@ -2411,6 +2406,18 @@ packages:
 
   /debug/4.3.1:
     resolution: {integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: true
+
+  /debug/4.3.3:
+    resolution: {integrity: sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -3366,16 +3373,12 @@ packages:
     resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}
     engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
-      flatted: 3.1.1
+      flatted: 3.2.5
       rimraf: 3.0.2
     dev: true
 
-  /flatted/2.0.2:
-    resolution: {integrity: sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==}
-    dev: true
-
-  /flatted/3.1.1:
-    resolution: {integrity: sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==}
+  /flatted/3.2.5:
+    resolution: {integrity: sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==}
     dev: true
 
   /for-in/1.0.2:
@@ -3417,13 +3420,13 @@ packages:
       null-check: 1.0.0
     dev: true
 
-  /fs-extra/8.1.0:
-    resolution: {integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==}
-    engines: {node: '>=6 <7 || >=8'}
+  /fs-extra/10.0.1:
+    resolution: {integrity: sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==}
+    engines: {node: '>=12'}
     dependencies:
       graceful-fs: 4.2.6
-      jsonfile: 4.0.0
-      universalify: 0.1.2
+      jsonfile: 6.1.0
+      universalify: 2.0.0
     dev: true
 
   /fs.realpath/1.0.0:
@@ -4305,7 +4308,7 @@ packages:
     resolution: {integrity: sha512-c16LpFRkR8vQXyHZ5nLpY35JZtzj1PQY1iZmesUbf1FZHbIupcWfjgOXBY9YHkLEQ6puz1u4Dgj6qmU/DisrZg==}
     engines: {node: '>=8'}
     dependencies:
-      debug: 4.3.1
+      debug: 4.3.3
       istanbul-lib-coverage: 3.0.0
       source-map: 0.6.1
     transitivePeerDependencies:
@@ -4876,8 +4879,10 @@ packages:
       minimist: 1.2.5
     dev: true
 
-  /jsonfile/4.0.0:
-    resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=}
+  /jsonfile/6.1.0:
+    resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+    dependencies:
+      universalify: 2.0.0
     optionalDependencies:
       graceful-fs: 4.2.6
     dev: true
@@ -5104,15 +5109,15 @@ packages:
       is-unicode-supported: 0.1.0
     dev: true
 
-  /log4js/6.2.1:
-    resolution: {integrity: sha512-7n+Oqxxz7VcQJhIlqhcYZBTpbcQ7XsR0MUIfJkx/n3VUjkAS4iUr+4UJlhxf28RvP9PMGQXbgTUhLApnu0XXgA==}
+  /log4js/6.4.1:
+    resolution: {integrity: sha512-iUiYnXqAmNKiIZ1XSAitQ4TmNs8CdZYTAWINARF3LjnsLN8tY5m0vRwd6uuWj/yNY0YHxeZodnbmxKFUOM2rMg==}
     engines: {node: '>=8.0'}
     dependencies:
-      date-format: 3.0.0
-      debug: 4.3.1
-      flatted: 2.0.2
+      date-format: 4.0.3
+      debug: 4.3.3
+      flatted: 3.2.5
       rfdc: 1.3.0
-      streamroller: 2.2.4
+      streamroller: 3.0.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6814,13 +6819,13 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /streamroller/2.2.4:
-    resolution: {integrity: sha512-OG79qm3AujAM9ImoqgWEY1xG4HX+Lw+yY6qZj9R1K2mhF5bEmQ849wvrb+4vt4jLMLzwXttJlQbOdPOQVRv7DQ==}
+  /streamroller/3.0.2:
+    resolution: {integrity: sha512-ur6y5S5dopOaRXBuRIZ1u6GC5bcEXHRZKgfBjfCglMhmIf+roVCECjvkEYzNQOXIN2/JPnkMPW/8B3CZoKaEPA==}
     engines: {node: '>=8.0'}
     dependencies:
-      date-format: 2.1.0
-      debug: 4.3.1
-      fs-extra: 8.1.0
+      date-format: 4.0.3
+      debug: 4.3.3
+      fs-extra: 10.0.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -7378,6 +7383,11 @@ packages:
   /universalify/0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
     engines: {node: '>= 4.0.0'}
+    dev: true
+
+  /universalify/2.0.0:
+    resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
+    engines: {node: '>= 10.0.0'}
     dev: true
 
   /unset-value/1.0.0:
