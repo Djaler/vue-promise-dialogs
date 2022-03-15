@@ -19,7 +19,7 @@ specifiers:
   eslint: 7.32.0
   eslint-import-resolver-typescript: 2.5.0
   jest: 26.6.3
-  nano-staged: 0.5.0
+  nano-staged: 0.6.0
   simple-git-hooks: 2.7.0
   standard-version: 9.3.2
   ts-jest: 26.5.6
@@ -50,7 +50,7 @@ devDependencies:
   eslint: 7.32.0
   eslint-import-resolver-typescript: 2.5.0_eslint@7.32.0
   jest: 26.6.3
-  nano-staged: 0.5.0
+  nano-staged: 0.6.0
   simple-git-hooks: 2.7.0
   standard-version: 9.3.2
   ts-jest: 26.5.6_jest@26.6.3+typescript@4.4.2
@@ -5474,8 +5474,8 @@ packages:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
     dev: true
 
-  /nano-staged/0.5.0:
-    resolution: {integrity: sha512-5jkhLvyZM974RmCyI8vt7zo0QK6GIAOCBe6e7L36awXIlG+40/5zJiDvESFrFmO4PhBCRm9lUlnH0SsWAFLDLg==}
+  /nano-staged/0.6.0:
+    resolution: {integrity: sha512-TqbdujUpBMwaBu582a5/BHlxTrs3Mu1DMk8KF2q38M0CTGiY34WRpwaQXTy5jRc5BXGjBCy4XByS69TSaS8WPw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
