@@ -111,3 +111,7 @@ const openDialog = createPromiseDialog(BooleanDialog);
 
 const result: boolean = await openDialog({ text: 'Some text' });
 ```
+
+## TODO
+- [ ] Vue 3 support
+- [ ] Fallback to mount dialogs without PromiseDialogsWrapper
