@@ -22,8 +22,8 @@
     "stryker": "stryker run",
     "build:typings": "ttsc -p tsconfig.build.json && copyfiles -u 1 \"src/**/*.d.ts\" dist/types",
     "build": "vite build && npm run build:typings",
-    "check-es6": "es-check es6 dist/vue-promise-dialogs.umd.js",
-    "check-treeshake": "agadoo dist/vue-promise-dialogs.es.js",
+    "check-es6": "es-check es6 dist/index.js",
+    "check-treeshake": "agadoo dist/index.mjs",
     "postbuild": "npm run check-es6 && npm run check-treeshake",
     "prerelease": "npm run lint && npm run test && npm run build",
     "release": "standard-version --preset @djaler/standard",
@@ -33,9 +33,9 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-promise-dialogs.umd.js",
-  "module": "./dist/vue-promise-dialogs.es.js",
-  "exports": "./dist/vue-promise-dialogs.es.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": "./dist/index.mjs",
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
   "packageManager": "pnpm@6.27.1",

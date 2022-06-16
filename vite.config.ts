@@ -8,7 +8,17 @@ export default defineConfig({
     build: {
         lib: {
             entry: 'src/index.ts',
-            name: 'vuePromiseDialogs',
+            formats: ['es', 'cjs'],
+            fileName: (format) => {
+                switch (format) {
+                    case 'es':
+                        return 'index.mjs';
+                    case 'cjs':
+                        return 'index.js';
+                    default:
+                        throw new Error(`Unexpected format: ${format}`);
+                }
+            },
         },
         rollupOptions: {
             external: Object.keys(packageJson.peerDependencies),
