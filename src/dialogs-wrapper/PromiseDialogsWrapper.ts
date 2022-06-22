@@ -54,11 +54,11 @@ export default Vue.extend({
                 ]);
             });
         },
-        onResolve(id: symbol, result: unknown, unmountDelay?: number) {
+        resolve(id: symbol, result: unknown, unmountDelay?: number) {
             this.dialogsData.get(id)?.promiseResolve(result);
             this.unmountDialog(id, unmountDelay);
         },
-        onReject(id: symbol, error: unknown, unmountDelay?: number) {
+        reject(id: symbol, error: unknown, unmountDelay?: number) {
             this.dialogsData.get(id)?.promiseReject(error);
             this.unmountDialog(id, unmountDelay);
         },
@@ -76,11 +76,6 @@ export default Vue.extend({
                 unmount();
             }
         },
-        closeAll(reason: unknown, delay?: number) {
-            [...this.dialogsData].forEach(([id]) => {
-                this.onReject(id, reason, delay);
-            });
-        },
     },
     render(createElement): VNode {
         return createElement(
@@ -93,10 +88,10 @@ export default Vue.extend({
                     },
                     on: {
                         resolve: (result: unknown, unmountDelay?: number) => {
-                            this.onResolve(id, result, unmountDelay || value.unmountDelay);
+                            this.resolve(id, result, unmountDelay || value.unmountDelay);
                         },
                         reject: (error: unknown, unmountDelay?: number) => {
-                            this.onReject(id, error, unmountDelay || value.unmountDelay);
+                            this.reject(id, error, unmountDelay || value.unmountDelay);
                         },
                     },
                 }),

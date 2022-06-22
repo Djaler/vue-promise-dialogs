@@ -5,9 +5,11 @@ interface OptionalValueWrapper<T> {
 }
 
 interface PromiseDialogsWrapper {
+    dialogsData: Map<symbol, unknown>;
+
     add<P, R>(component: RegularComponent, params: P, unmountDelay?: number): Promise<R>;
 
-    closeAll(reason: unknown, unmountDelay?: number): void;
+    reject(id: symbol, error: unknown, unmountDelay?: number): void;
 }
 
 export const promiseDialogsWrapper: OptionalValueWrapper<PromiseDialogsWrapper> = {};
