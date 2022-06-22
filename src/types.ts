@@ -1,9 +1,11 @@
-import { AsyncComponent, Component } from 'vue';
+import { Component, ComponentOptions } from 'vue';
 import { EsModuleComponent } from 'vue/types/options';
 
 import BasePromiseDialog from './base-class-dialog';
 
-export type RegularComponent = Component<any, any, any, any> | AsyncComponent<any, any, any, any>;
+type Values<T> = T extends Record<any, infer U> ? U : never;
+
+export type RegularComponent = Values<ComponentOptions<any>['components']>;
 
 interface ClassConstructor<T> {
     new(...args: any[]): T;
