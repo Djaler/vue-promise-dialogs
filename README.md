@@ -68,48 +68,7 @@ You have two options here:
 
 In some cases you may want to close all opened dialogs. For example, on route change.
 
-You can use `closeAllDialogs` for this. All you need is to set a reason, which will be used in promises reject. 
-
-### Vue Class Component Example
-
-If you're using Vue Class Component to define your dialog components, you can extend them from `BasePromiseDialog`.
-This will allow you to avoid defining type arguments in `createPromiseDialog`.
-`BasePromiseDialog` already defines `params` prop and methods `resolve`/`reject`, so you don't have to.
-
-```ts
-import { Component } from "vue-class-component"
-import { BasePromiseDialog, createPromiseDialog } from "vue-promise-dialogs"
-
-@Component({
-    template: `
-      <div class="dialog">
-          <p>{{ params.text }}</p>
-          <button name="true" @click="onTrue">True</button>
-          <button name="false" @click="onFalse">False</button>
-          <button name="cancel" @click="onCancel">Cancel</button>
-      </div>
-    `,
-})
-// You need to extend your component from BasePromiseDialog with correct type arguments
-class BooleanDialog extends BasePromiseDialog<{ text: string }, boolean> {
-    onTrue() {
-        this.resolve(true);
-    }
-
-    onFalse() {
-        this.resolve(true);
-    }
-
-    onCancel() {
-        this.reject('cancel');
-    }
-}
-
-// You don't have to specify type arguments because they are inferenced from BooleanDialog
-const openDialog = createPromiseDialog(BooleanDialog);
-
-const result: boolean = await openDialog({ text: 'Some text' });
-```
+You can use `closeAllDialogs` for this. All you need is to set a reason, which will be used in promises reject.
 
 ## TODO
 - [ ] Vue 3 support
