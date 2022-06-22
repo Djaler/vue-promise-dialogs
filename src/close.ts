@@ -5,5 +5,5 @@ export function closeAllDialogs(reason: unknown, unmountDelay?: number) {
     if (!wrapper) {
         throw new Error('PromiseDialogsWrapper instance not found');
     }
-    wrapper.dialogsData.forEach((_, id) => wrapper.reject(id, reason, unmountDelay));
+    Object.getOwnPropertySymbols(wrapper.dialogsData).forEach(id => wrapper.reject(id, reason, unmountDelay));
 }

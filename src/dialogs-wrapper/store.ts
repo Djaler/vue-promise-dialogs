@@ -5,7 +5,7 @@ interface OptionalValueWrapper<T> {
 }
 
 interface PromiseDialogsWrapper {
-    dialogsData: Map<symbol, unknown>;
+    dialogsData: Record<symbol, unknown>;
 
     add<P, R>(component: RegularComponent, params: P, unmountDelay?: number): Promise<R>;
 

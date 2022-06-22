@@ -21,7 +21,7 @@ export default Vue.extend({
     },
     data() {
         return {
-            dialogsData: new Map<symbol, DialogData<any, any>>(),
+            dialogsData: {} as Record<symbol, DialogData<any, any>>,
         };
     },
     created() {
@@ -38,36 +38,26 @@ export default Vue.extend({
     methods: {
         add<P, R>(component: RegularComponent, params: P, unmountDelay?: number): Promise<R> {
             return new Promise<R>((resolve, reject) => {
-                this.dialogsData = new Map([
-                    ...this.dialogsData,
-                    [
-                        // eslint-disable-next-line symbol-description
-                        Symbol(),
-                        {
-                            component,
-                            params,
-                            promiseResolve: resolve,
-                            promiseReject: reject,
-                            unmountDelay,
-                        },
-                    ],
-                ]);
+                // eslint-disable-next-line symbol-description
+                this.$set(this.dialogsData, Symbol() as any /* symbol really can be used as a key */, {
+                    component,
+                    params,
+                    promiseResolve: resolve,
+                    promiseReject: reject,
+                    unmountDelay,
+                });
             });
         },
         resolve(id: symbol, result: unknown, unmountDelay?: number) {
-            this.dialogsData.get(id)?.promiseResolve(result);
+            this.dialogsData[id].promiseResolve(result);
             this.unmountDialog(id, unmountDelay);
         },
         reject(id: symbol, error: unknown, unmountDelay?: number) {
-            this.dialogsData.get(id)?.promiseReject(error);
+            this.dialogsData[id].promiseReject(error);
             this.unmountDialog(id, unmountDelay);
         },
         unmountDialog(id: symbol, delay?: number) {
-            const unmount = () => {
-                this.dialogsData = new Map(
-                    [...this.dialogsData].filter(([key]) => key !== id),
-                );
-            };
+            const unmount = () => this.$delete(this.dialogsData, id as any);
             if (delay) {
                 setTimeout(unmount, delay);
             } else if (this.unmountDelay) {
@@ -80,8 +70,9 @@ export default Vue.extend({
     render(createElement): VNode {
         return createElement(
             'div',
-            [...this.dialogsData].map(
-                ([id, value]) => createElement(value.component, {
+            Object.getOwnPropertySymbols(this.dialogsData).map((id) => {
+                const value = this.dialogsData[id];
+                return createElement(value.component, {
                     key: id as any,
                     props: {
                         params: value.params,
@@ -94,8 +85,8 @@ export default Vue.extend({
                             this.reject(id, error, unmountDelay || value.unmountDelay);
                         },
                     },
-                }),
-            ),
+                });
+            }),
         );
     },
 });
