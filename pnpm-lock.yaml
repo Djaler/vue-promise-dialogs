@@ -9,7 +9,6 @@ specifiers:
   clean-publish: 4.0.0
   commit-and-tag-version: 10.0.1
   conventional-github-releaser: 3.1.5
-  copyfiles: 2.4.1
   es-check: 5.2.4
   eslint: 7.32.0
   eslint-import-resolver-typescript: 2.5.0
@@ -20,8 +19,6 @@ specifiers:
   vite: 2.9.12
   vitest: 0.15.2
   vue: 2.6.12
-  vue-class-component: 7.2.6
-  vue-property-decorator: 9.1.2
   vue-template-compiler: 2.6.12
 
 devDependencies:
@@ -33,7 +30,6 @@ devDependencies:
   clean-publish: 4.0.0
   commit-and-tag-version: 10.0.1
   conventional-github-releaser: 3.1.5
-  copyfiles: 2.4.1
   es-check: 5.2.4
   eslint: 7.32.0
   eslint-import-resolver-typescript: 2.5.0_eslint@7.32.0
@@ -44,8 +40,6 @@ devDependencies:
   vite: 2.9.12
   vitest: 0.15.2_jsdom@20.0.0
   vue: 2.6.12
-  vue-class-component: 7.2.6_vue@2.6.12
-  vue-property-decorator: 9.1.2_2dc4252c5371093c9ebcca71536ac4e9
   vue-template-compiler: 2.6.12
 
 packages:
@@ -1165,19 +1159,6 @@ packages:
       q: 1.5.1
     dev: true
 
-  /copyfiles/2.4.1:
-    resolution: {integrity: sha512-fereAvAvxDrQDOXybk3Qu3dPbOoKoysFMWtkY3mv5BsL8//OSZVL5DCLYqgRfY5cWirgRzlC+WSrxp6Bo3eNZg==}
-    hasBin: true
-    dependencies:
-      glob: 7.1.6
-      minimatch: 3.0.4
-      mkdirp: 1.0.4
-      noms: 0.0.0
-      through2: 2.0.5
-      untildify: 4.0.0
-      yargs: 16.2.0
-    dev: true
-
   /core-util-is/1.0.2:
     resolution: {integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=}
     dev: true
@@ -2252,17 +2233,6 @@ packages:
       is-glob: 4.0.1
     dev: true
 
-  /glob/7.1.6:
-    resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 3.0.4
-      once: 1.4.0
-      path-is-absolute: 1.0.1
-    dev: true
-
   /glob/7.2.0:
     resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==}
     dependencies:
@@ -2678,10 +2648,6 @@ packages:
   /is-whitespace/0.3.0:
     resolution: {integrity: sha1-Fjnssb4DauxppUy7QBz77XEUq38=}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /isarray/0.0.1:
-    resolution: {integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=}
     dev: true
 
   /isarray/1.0.0:
@@ -3228,13 +3194,6 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /noms/0.0.0:
-    resolution: {integrity: sha1-2o69nzr51nYJGbJ9nNyAkqczKFk=}
-    dependencies:
-      inherits: 2.0.4
-      readable-stream: 1.0.34
-    dev: true
-
   /nopt/5.0.0:
     resolution: {integrity: sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ==}
     engines: {node: '>=6'}
@@ -3771,15 +3730,6 @@ packages:
       type-fest: 0.6.0
     dev: true
 
-  /readable-stream/1.0.34:
-    resolution: {integrity: sha1-Elgg40vIQtLyqq+v5MKRbuMsFXw=}
-    dependencies:
-      core-util-is: 1.0.2
-      inherits: 2.0.4
-      isarray: 0.0.1
-      string_decoder: 0.10.31
-    dev: true
-
   /readable-stream/2.3.7:
     resolution: {integrity: sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==}
     dependencies:
@@ -4161,10 +4111,6 @@ packages:
       define-properties: 1.1.3
     dev: true
 
-  /string_decoder/0.10.31:
-    resolution: {integrity: sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=}
-    dev: true
-
   /string_decoder/1.1.1:
     resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}
     dependencies:
@@ -4497,11 +4443,6 @@ packages:
     engines: {node: '>= 4.0.0'}
     dev: true
 
-  /untildify/4.0.0:
-    resolution: {integrity: sha512-KK8xQ1mkzZeg9inewmFVDNkg3l5LUhoq9kN6iWYB/CC9YMG8HA+c1Q8HwDe6dEX7kErrEVNVBO3fWsVq5iDgtw==}
-    engines: {node: '>=8'}
-    dev: true
-
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
@@ -4593,24 +4534,6 @@ packages:
       - sass
       - stylus
       - supports-color
-    dev: true
-
-  /vue-class-component/7.2.6_vue@2.6.12:
-    resolution: {integrity: sha512-+eaQXVrAm/LldalI272PpDe3+i4mPis0ORiMYxF6Ae4hyuCh15W8Idet7wPUEs4N4YptgFHGys4UrgNQOMyO6w==}
-    peerDependencies:
-      vue: ^2.0.0
-    dependencies:
-      vue: 2.6.12
-    dev: true
-
-  /vue-property-decorator/9.1.2_2dc4252c5371093c9ebcca71536ac4e9:
-    resolution: {integrity: sha512-xYA8MkZynPBGd/w5QFJ2d/NM0z/YeegMqYTphy7NJQXbZcuU6FC6AOdUAcy4SXP+YnkerC6AfH+ldg7PDk9ESQ==}
-    peerDependencies:
-      vue: '*'
-      vue-class-component: '*'
-    dependencies:
-      vue: 2.6.12
-      vue-class-component: 7.2.6_vue@2.6.12
     dev: true
 
   /vue-template-compiler/2.6.12:

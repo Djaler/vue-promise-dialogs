@@ -19,7 +19,7 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "build:typings": "tsc -p tsconfig.build.json && copyfiles -u 1 \"src/**/*.d.ts\" dist/types",
+    "build:typings": "tsc -p tsconfig.build.json",
     "build": "vite build && npm run build:typings",
     "check-es6": "es-check es6 dist/index.js",
     "check-treeshake": "agadoo dist/index.mjs",
@@ -50,7 +50,6 @@
     "clean-publish": "4.0.0",
     "commit-and-tag-version": "10.0.1",
     "conventional-github-releaser": "3.1.5",
-    "copyfiles": "2.4.1",
     "es-check": "5.2.4",
     "eslint": "7.32.0",
     "eslint-import-resolver-typescript": "2.5.0",
@@ -61,8 +60,6 @@
     "vite": "2.9.12",
     "vitest": "0.15.2",
     "vue": "2.6.12",
-    "vue-class-component": "7.2.6",
-    "vue-property-decorator": "9.1.2",
     "vue-template-compiler": "2.6.12"
   },
   "simple-git-hooks": {
