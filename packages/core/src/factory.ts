@@ -1,4 +1,4 @@
-import { promiseDialogsWrapper } from './dialogs-wrapper/store';
+import { add, wrapperExists } from './dialogs-wrapper/store';
 import { RegularComponent } from './types';
 
 export function createPromiseDialog<P, R>(
@@ -6,11 +6,11 @@ export function createPromiseDialog<P, R>(
     unmountDelay?: number,
 ): (params: P) => Promise<R> {
     return function dialogFunction(params: P): Promise<R> {
-        if (!promiseDialogsWrapper.value) {
+        if (!wrapperExists.value) {
             throw new Error('PromiseDialogsWrapper instance not found');
         }
 
-        return promiseDialogsWrapper.value.add<P, R>(
+        return add<P, R>(
             component,
             params,
             unmountDelay,
