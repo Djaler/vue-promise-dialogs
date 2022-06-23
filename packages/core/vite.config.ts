@@ -20,14 +20,17 @@ export default defineConfig({
             },
         },
         rollupOptions: {
-            external: Object.keys(packageJson.peerDependencies),
+            external: [
+                ...Object.keys(packageJson.dependencies),
+                ...Object.keys(packageJson.peerDependencies),
+            ],
         },
         target: 'es6',
         minify: false,
     },
     plugins: [
         replace({
-            'Vue.extend': '/*#__PURE__*/ Vue.extend',
+            ref: '/*#__PURE__*/ ref',
         }) as Plugin,
     ],
 });

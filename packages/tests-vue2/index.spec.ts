@@ -1,14 +1,14 @@
+import { defineComponent } from '@vue/composition-api';
 import { mount } from '@vue/test-utils';
 import { testVuePromiseDialogs } from 'tests-base';
 import { beforeEach, describe, it } from 'vitest';
-import Vue from 'vue';
 import { compileToFunctions } from 'vue-template-compiler';
 
 testVuePromiseDialogs({
     describe,
     it,
     beforeEach,
-    TestDialog: Vue.extend({
+    TestDialog: defineComponent({
         name: 'TestDialog',
         ...compileToFunctions(`
           <div>
@@ -25,7 +25,7 @@ testVuePromiseDialogs({
             },
         },
     }),
-    TestDialogWithDelays: Vue.extend({
+    TestDialogWithDelays: defineComponent({
         name: 'TestDialogWithDelays',
         ...compileToFunctions(`
           <div>
@@ -65,8 +65,5 @@ testVuePromiseDialogs({
                 };
             },
         };
-    },
-    async nextTick() {
-        await Vue.nextTick();
     },
 });

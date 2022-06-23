@@ -28,11 +28,16 @@
   "module": "./dist/index.mjs",
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
+  "dependencies": {
+    "vue-demi": "^0.13.4"
+  },
   "peerDependencies": {
+    "@vue/composition-api": "^1.1.0",
     "vue": "^2.6.4"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "2.3.4",
+    "@vue/composition-api": "1.6.2",
     "agadoo": "2.0.0",
     "clean-publish": "4.0.0",
     "es-check": "5.2.4",

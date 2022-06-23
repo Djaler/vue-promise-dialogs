@@ -1,15 +1,47 @@
+import { del, Ref, ref, set } from 'vue-demi';
+
 import { RegularComponent } from '../types';
 
-interface OptionalValueWrapper<T> {
-    value?: T;
+export const wrapperExists = ref(false);
+
+interface DialogData<P, R> {
+    component: RegularComponent;
+    params: P;
+    promiseResolve: (value: R) => void;
+    promiseReject: (error: unknown) => void;
+    unmountDelay?: number;
 }
 
-interface PromiseDialogsWrapper {
-    dialogsData: Record<symbol, unknown>;
+export const dialogsData: Ref<Record<symbol, DialogData<any, any>>> = ref({});
 
-    add<P, R>(component: RegularComponent, params: P, unmountDelay?: number): Promise<R>;
-
-    reject(id: symbol, error: unknown, unmountDelay?: number): void;
+export function add<P, R>(component: RegularComponent, params: P, unmountDelay?: number): Promise<R> {
+    return new Promise<R>((resolve, reject) => {
+        // eslint-disable-next-line symbol-description
+        set(dialogsData.value, Symbol(), {
+            component,
+            params,
+            promiseResolve: resolve,
+            promiseReject: reject,
+            unmountDelay,
+        });
+    });
 }
 
-export const promiseDialogsWrapper: OptionalValueWrapper<PromiseDialogsWrapper> = {};
+export function resolveDialog(id: symbol, result: unknown, unmountDelay?: number) {
+    dialogsData.value[id].promiseResolve(result);
+    unmountDialog(id, unmountDelay);
+}
+
+export function rejectDialog(id: symbol, error: unknown, unmountDelay?: number) {
+    dialogsData.value[id].promiseReject(error);
+    unmountDialog(id, unmountDelay);
+}
+
+function unmountDialog(id: symbol, delay?: number) {
+    const unmount = () => del(dialogsData.value, id);
+    if (delay) {
+        setTimeout(unmount, delay);
+    } else {
+        unmount();
+    }
+}

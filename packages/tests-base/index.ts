@@ -1,4 +1,5 @@
 import { expect, SuiteAPI, SuiteHooks, TestAPI, vitest } from 'vitest';
+import { nextTick } from 'vue-demi';
 import { closeAllDialogs, createPromiseDialog, PromiseDialogsWrapper } from 'vue-promise-dialogs/src';
 import { RegularComponent } from 'vue-promise-dialogs/src/types';
 
@@ -24,8 +25,6 @@ interface Params {
     TestDialogWithDelays: RegularComponent;
 
     mountWrapper(promiseDialogsWrapper: typeof PromiseDialogsWrapper): Wrapper;
-
-    nextTick(): Promise<void>;
 }
 
 export function testVuePromiseDialogs(
@@ -36,7 +35,6 @@ export function testVuePromiseDialogs(
         TestDialog,
         TestDialogWithDelays,
         mountWrapper,
-        nextTick,
     }: Params,
 ) {
     const testDialogFunction = createPromiseDialog<{ text: string }, boolean>(TestDialog);
