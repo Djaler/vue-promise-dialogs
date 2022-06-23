@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.3](https://github.com/Djaler/vue-promise-dialogs/compare/v1.3.2...v1.3.3) (2022-06-23)
+
+
+### Performance Improvements
+
+* use object instead of Map to store dialogs data ([6168b86](https://github.com/Djaler/vue-promise-dialogs/commit/6168b86013223df3968fd27c44810207134b33a8))
+
+
+### Improvements
+
+* improve tree-shaking by moving closeAll logic from PromiseDialogsWrapper ([02cead1](https://github.com/Djaler/vue-promise-dialogs/commit/02cead1d80d9dcf9ee096057cdbf6db1634f9c23))
+
 ### [1.3.2](https://github.com/Djaler/vue-promise-dialogs/compare/v1.3.1...v1.3.2) (2022-06-16)
 
 ### [1.3.1](https://github.com/Djaler/vue-promise-dialogs/compare/v1.3.0...v1.3.1) (2022-02-15)
