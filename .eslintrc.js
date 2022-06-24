@@ -10,11 +10,6 @@ module.exports = {
         },
     },
     rules: {
-        'import/no-extraneous-dependencies': ['error', {
-            devDependencies: [
-                'tests/**',
-                'vite.config.ts',
-            ],
-        }],
+        'import/no-extraneous-dependencies': 'off',
     },
 };

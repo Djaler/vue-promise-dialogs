@@ -1,0 +1,5 @@
+{
+  "packageFiles": ["packages/core/package.json"],
+  "bumpFiles": ["packages/core/package.json"],
+  "infile": "packages/core/CHANGELOG.md"
+}
