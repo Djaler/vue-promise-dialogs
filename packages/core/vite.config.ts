@@ -1,5 +1,5 @@
 import replace from '@rollup/plugin-replace';
-import { defineConfig } from 'vitest/config';
+import { defineConfig, Plugin } from 'vite';
 
 import packageJson from './package.json';
 
@@ -28,9 +28,6 @@ export default defineConfig({
     plugins: [
         replace({
             'Vue.extend': '/*#__PURE__*/ Vue.extend',
-        }),
+        }) as Plugin,
     ],
-    test: {
-        environment: 'jsdom',
-    },
 });

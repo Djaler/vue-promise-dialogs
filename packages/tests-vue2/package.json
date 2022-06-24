@@ -1,0 +1,15 @@
+{
+  "name": "tests-vue2",
+  "private": true,
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "1.3.0",
+    "jsdom": "20.0.0",
+    "vitest": "0.15.2",
+    "vue": "2.6.12",
+    "vue-promise-dialogs": "workspace:*",
+    "vue-template-compiler": "2.6.12"
+  }
+}
