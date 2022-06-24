@@ -60,8 +60,6 @@ export default Vue.extend({
             const unmount = () => this.$delete(this.dialogsData, id as any);
             if (delay) {
                 setTimeout(unmount, delay);
-            } else if (this.unmountDelay) {
-                setTimeout(unmount, this.unmountDelay);
             } else {
                 unmount();
             }
@@ -79,10 +77,10 @@ export default Vue.extend({
                     },
                     on: {
                         resolve: (result: unknown, unmountDelay?: number) => {
-                            this.resolve(id, result, unmountDelay || value.unmountDelay);
+                            this.resolve(id, result, unmountDelay || value.unmountDelay || this.unmountDelay);
                         },
                         reject: (error: unknown, unmountDelay?: number) => {
-                            this.reject(id, error, unmountDelay || value.unmountDelay);
+                            this.reject(id, error, unmountDelay || value.unmountDelay || this.unmountDelay);
                         },
                     },
                 });
