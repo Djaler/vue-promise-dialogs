@@ -48,10 +48,6 @@ describe('when PromiseDialogsWrapper mounted', () => {
         };
     });
 
-    it('should have correct name', () => {
-        expect(wrapper.findComponent(PromiseDialogsWrapper).vm.$options.name).toEqual('PromiseDialogsWrapper');
-    });
-
     describe('when dialog function called', () => {
         let resultPromise: Promise<boolean>;
         let dialog: Wrapper<Vue>;
@@ -381,13 +377,6 @@ describe('when PromiseDialogsWrapper not mounted', () => {
                     // ignore
                 });
             }).toThrowError('PromiseDialogsWrapper instance not found');
-        });
-    });
-
-    describe('when closeAllDialogs called', () => {
-        it('should throw error', () => {
-            expect(() => closeAllDialogs('reason'))
-                .toThrowError('PromiseDialogsWrapper instance not found');
         });
     });
 });
