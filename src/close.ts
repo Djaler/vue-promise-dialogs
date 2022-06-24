@@ -1,4 +1,4 @@
-import { promiseDialogsWrapper } from '@/dialogs-wrapper/store';
+import { promiseDialogsWrapper } from './dialogs-wrapper/store';
 
 export function closeAllDialogs(reason: unknown, unmountDelay?: number) {
     const wrapper = promiseDialogsWrapper.value;

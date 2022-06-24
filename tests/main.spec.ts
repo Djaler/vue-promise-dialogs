@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it, vitest } from 'vitest';
 import Vue from 'vue';
 import { compileToFunctions } from 'vue-template-compiler';
 
-import { closeAllDialogs, createPromiseDialog, PromiseDialogsWrapper } from '@/index';
+import { closeAllDialogs, createPromiseDialog, PromiseDialogsWrapper } from '../src';
 
 let wrapper: Wrapper<Vue>;
 

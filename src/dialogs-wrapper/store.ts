@@ -1,4 +1,4 @@
-import { RegularComponent } from '@/types';
+import { RegularComponent } from '../types';
 
 interface OptionalValueWrapper<T> {
     value?: T;

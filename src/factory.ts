@@ -1,5 +1,5 @@
-import { promiseDialogsWrapper } from '@/dialogs-wrapper/store';
-import { BasePromiseDialogComponent, RegularComponent } from '@/types';
+import { promiseDialogsWrapper } from './dialogs-wrapper/store';
+import { BasePromiseDialogComponent, RegularComponent } from './types';
 
 export function createPromiseDialog<P, R>(
     component: BasePromiseDialogComponent<P, R>,

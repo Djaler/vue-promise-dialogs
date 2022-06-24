@@ -1,7 +1,7 @@
 import { AsyncComponent, Component } from 'vue';
 import { EsModuleComponent } from 'vue/types/options';
 
-import BasePromiseDialog from '@/base-class-dialog';
+import BasePromiseDialog from './base-class-dialog';
 
 export type RegularComponent = Component<any, any, any, any> | AsyncComponent<any, any, any, any>;
 

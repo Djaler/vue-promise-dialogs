@@ -1,7 +1,7 @@
 import Vue, { VNode } from 'vue';
 
-import { promiseDialogsWrapper } from '@/dialogs-wrapper/store';
-import { RegularComponent } from '@/types';
+import { RegularComponent } from '../types';
+import { promiseDialogsWrapper } from './store';
 
 interface DialogData<P, R> {
     component: RegularComponent;

@@ -5,7 +5,6 @@ specifiers:
   '@djaler/eslint-config-typescript': 0.0.7
   '@rollup/plugin-replace': 2.3.4
   '@vue/test-utils': 1.3.0
-  '@zerollup/ts-transform-paths': 1.7.18
   agadoo: 2.0.0
   clean-publish: 4.0.0
   conventional-github-releaser: 3.1.5
@@ -17,7 +16,6 @@ specifiers:
   nano-staged: 0.6.0
   simple-git-hooks: 2.7.0
   standard-version: 9.3.2
-  ttypescript: 1.5.12
   typescript: 4.4.2
   vite: 2.9.12
   vitest: 0.15.2
@@ -31,7 +29,6 @@ devDependencies:
   '@djaler/eslint-config-typescript': 0.0.7_eslint@7.32.0+typescript@4.4.2
   '@rollup/plugin-replace': 2.3.4
   '@vue/test-utils': 1.3.0_ae554d8947d7e926b014dda25865f517
-  '@zerollup/ts-transform-paths': 1.7.18_typescript@4.4.2
   agadoo: 2.0.0
   clean-publish: 4.0.0
   conventional-github-releaser: 3.1.5
@@ -43,7 +40,6 @@ devDependencies:
   nano-staged: 0.6.0
   simple-git-hooks: 2.7.0
   standard-version: 9.3.2
-  ttypescript: 1.5.12_typescript@4.4.2
   typescript: 4.4.2
   vite: 2.9.12
   vitest: 0.15.2_jsdom@20.0.0
@@ -365,24 +361,6 @@ packages:
       pretty: 2.0.0
       vue: 2.6.12
       vue-template-compiler: 2.6.12
-    dev: true
-
-  /@zerollup/ts-helpers/1.7.18_typescript@4.4.2:
-    resolution: {integrity: sha512-S9zN+y+i5yN/evfWquzSO3lubqPXIsPQf6p9OiPMpRxDx/0totPLF39XoRw48Dav5dSvbIE8D2eAPpXXJxvKwg==}
-    peerDependencies:
-      typescript: '>=3.7.2'
-    dependencies:
-      resolve: 1.22.0
-      typescript: 4.4.2
-    dev: true
-
-  /@zerollup/ts-transform-paths/1.7.18_typescript@4.4.2:
-    resolution: {integrity: sha512-YPVUxvWQVzRx1OBN0Pmkd58+R9FcfUJuwTaPUSoi5rKxuXMtxevTXdfi0w5mEaIH8b0DfL+wg0wFDHiJE+S2zA==}
-    peerDependencies:
-      typescript: '>=3.7.2'
-    dependencies:
-      '@zerollup/ts-helpers': 1.7.18_typescript@4.4.2
-      typescript: 4.4.2
     dev: true
 
   /JSONStream/1.3.5:
@@ -4432,17 +4410,6 @@ packages:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: 1.14.1
-      typescript: 4.4.2
-    dev: true
-
-  /ttypescript/1.5.12_typescript@4.4.2:
-    resolution: {integrity: sha512-1ojRyJvpnmgN9kIHmUnQPlEV1gq+VVsxVYjk/NfvMlHSmYxjK5hEvOOU2MQASrbekTUiUM7pR/nXeCc8bzvMOQ==}
-    hasBin: true
-    peerDependencies:
-      ts-node: '>=8.0.2'
-      typescript: '>=3.2.2'
-    dependencies:
-      resolve: 1.20.0
       typescript: 4.4.2
     dev: true
 

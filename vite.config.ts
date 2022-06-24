@@ -1,5 +1,4 @@
 import replace from '@rollup/plugin-replace';
-import { resolve } from 'path';
 import { defineConfig } from 'vitest/config';
 
 import packageJson from './package.json';
@@ -31,14 +30,6 @@ export default defineConfig({
             'Vue.extend': '/*#__PURE__*/ Vue.extend',
         }),
     ],
-    resolve: {
-        alias: [
-            {
-                find: /^@\/(.*)/,
-                replacement: `${resolve(__dirname, 'src')}/$1`,
-            },
-        ],
-    },
     test: {
         environment: 'jsdom',
     },

@@ -2,7 +2,7 @@ import { shallowMount, Wrapper } from '@vue/test-utils';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { Component } from 'vue-property-decorator';
 
-import { BasePromiseDialog } from '@/index';
+import { BasePromiseDialog } from '../src';
 
 @Component({
     template: `
