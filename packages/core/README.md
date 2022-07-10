@@ -12,11 +12,19 @@ They are opened (called) and then closed with some result (resolved) or canceled
 
 ## Install
 
+> From version 2.0.0 it works for Vue 2 and Vue 3 within a single package by the power of [vue-demi](https://github.com/vueuse/vue-demi) 🔥
+
+### Vue 3
+
 ```sh
-npm install --save vue-promise-dialogs
+npm install vue-promise-dialogs
 ```
 
-Or for a CDN version, you can use it on [unpkg.com](https://unpkg.com/vue-promise-dialogs)
+### Vue 2
+
+```sh
+npm install vue-promise-dialogs @vue/composition-api
+```
 
 ## Usage
 
@@ -29,7 +37,11 @@ Main requirements:
 ```ts
 import { createPromiseDialog } from "vue-promise-dialogs"
 
-const BooleanDialog = Vue.extend({
+interface BooleanDialogParams {
+    text: string;
+}
+
+const BooleanDialog = defineComponent({
     template: `
       <div class="dialog">
           <p>{{ params.text }}</p>
@@ -40,7 +52,7 @@ const BooleanDialog = Vue.extend({
     `,
     props: {
         params: {
-            type: Object,
+            type: Object as PropType<BooleanDialogParams>,
             required: true,
         },
     },
@@ -48,7 +60,7 @@ const BooleanDialog = Vue.extend({
 
 // First type argument is the type of params prop that will be passed to component
 // Second type argument is the type of value with which the promise will be fulfilled
-const openDialog = createPromiseDialog<{ text: string }, boolean>(BooleanDialog);
+const openDialog = createPromiseDialog<BooleanDialogParams, boolean>(BooleanDialog);
 
 // When you call this function, dialog will be mounted to `PromiseDialogsWrapper`.
 // When user press any button and resolve/reject event emitted, promise will be settled and dialog will be destroyed.
@@ -71,5 +83,4 @@ In some cases you may want to close all opened dialogs. For example, on route ch
 You can use `closeAllDialogs` for this. All you need is to set a reason, which will be used in promises reject.
 
 ## TODO
-- [ ] Vue 3 support
 - [ ] Fallback to mount dialogs without PromiseDialogsWrapper
