@@ -1,0 +1,14 @@
+{
+  "name": "tests-vue3",
+  "private": true,
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "2.0.2",
+    "jsdom": "20.0.0",
+    "tests-base": "workspace:*",
+    "vitest": "0.15.2",
+    "vue": "3.2.37"
+  }
+}

@@ -11,5 +11,6 @@ module.exports = {
     },
     rules: {
         'import/no-extraneous-dependencies': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
     },
 };

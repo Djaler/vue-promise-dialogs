@@ -1,4 +1,4 @@
-import { del, Ref, ref, set } from 'vue-demi';
+import { del, markRaw, Ref, ref, set } from 'vue-demi';
 
 import { RegularComponent } from '../types';
 
@@ -18,7 +18,7 @@ export function add<P, R>(component: RegularComponent, params: P, unmountDelay?:
     return new Promise<R>((resolve, reject) => {
         // eslint-disable-next-line symbol-description
         set(dialogsData.value, Symbol(), {
-            component,
+            component: markRaw(component),
             params,
             promiseResolve: resolve,
             promiseReject: reject,
