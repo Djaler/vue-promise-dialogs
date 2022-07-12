@@ -1,8 +1,8 @@
-import { h, isVue2, onBeforeUnmount } from 'vue-demi';
+import { defineComponent, h, isVue3, onBeforeUnmount } from 'vue-demi';
 
 import { dialogsData, rejectDialog, resolveDialog, wrapperExists } from './store';
 
-export default {
+export default defineComponent({
     name: 'PromiseDialogsWrapper',
     props: {
         unmountDelay: {
@@ -10,7 +10,7 @@ export default {
             default: 0,
         },
     },
-    setup(props: { unmountDelay: number }) {
+    setup(props) {
         if (wrapperExists.value) {
             console.error('PromiseDialogsWrapper instance already exists');
         }
@@ -38,22 +38,26 @@ export default {
                     id, error, unmountDelay || value.unmountDelay || props.unmountDelay,
                 );
 
-                if (isVue2) {
-                    return h(component, {
-                        key: id as any,
-                        props: {
-                            params,
-                        },
-                        on: {
-                            resolve,
-                            reject,
-                        },
+                if (isVue3) {
+                    return h(component as any, {
+                        key: id,
+                        params,
+                        onResolve: resolve,
+                        onReject: reject,
                     });
                 }
 
-                // @ts-ignore (signature is different in vue3)
-                return h(component, { key: id, params, onResolve: resolve, onReject: reject });
+                return h(component as any, {
+                    key: id as any,
+                    props: {
+                        params,
+                    },
+                    on: {
+                        resolve,
+                        reject,
+                    },
+                });
             }),
         );
     },
-};
+});

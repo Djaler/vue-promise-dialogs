@@ -9,7 +9,7 @@
     "switch-vue3": "cd packages/core && npm run switch-vue3",
     "test:vue2": "npm run switch-vue2 && cd packages/tests-vue2 && npm run test",
     "test:vue3": "npm run switch-vue3 && cd packages/tests-vue3 && npm run test",
-    "test": "npm run test:vue3 && npm run test:vue2",
+    "test": "npm run test:vue2 && npm run test:vue3",
     "build": "cd packages/core && npm run build",
     "prerelease": "npm run lint && npm run test && npm run build",
     "release": "commit-and-tag-version --preset @djaler/standard",
@@ -28,6 +28,15 @@
     "nano-staged": "0.6.0",
     "simple-git-hooks": "2.7.0",
     "typescript": "4.4.2"
+  },
+  "pnpm": {
+    "packageExtensions": {
+      "vue-template-compiler": {
+        "peerDependencies": {
+          "vue": "2.x"
+        }
+      }
+    }
   },
   "simple-git-hooks": {
     "pre-commit": "./node_modules/.bin/simple-git-hooks && ./node_modules/.bin/nano-staged"

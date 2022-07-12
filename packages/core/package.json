@@ -14,8 +14,8 @@
     "async"
   ],
   "scripts": {
-    "switch-vue2": "vue-demi-switch 2",
-    "switch-vue3": "vue-demi-switch 3 vue3",
+    "switch-vue2": "vue-demi-switch 2 vue2",
+    "switch-vue3": "vue-demi-switch 3",
     "build:typings": "tsc -p tsconfig.build.json",
     "build": "vite build && npm run build:typings",
     "check-es6": "es-check es6 dist/index.js",
@@ -44,13 +44,12 @@
   },
   "devDependencies": {
     "@rollup/plugin-replace": "2.3.4",
-    "@vue/composition-api": "1.6.2",
     "agadoo": "2.0.0",
     "clean-publish": "4.0.0",
     "es-check": "5.2.4",
     "vite": "2.9.12",
-    "vue": "2.6.12",
-    "vue3": "npm:vue@3.2.37"
+    "vue": "3.2.37",
+    "vue2": "npm:vue@2.6.12"
   },
   "clean-publish": {
     "withoutPublish": true,

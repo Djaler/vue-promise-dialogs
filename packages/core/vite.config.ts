@@ -31,6 +31,7 @@ export default defineConfig({
     plugins: [
         replace({
             ref: '/*#__PURE__*/ ref',
+            defineComponent: '/*#__PURE__*/ defineComponent',
         }) as Plugin,
     ],
 });
