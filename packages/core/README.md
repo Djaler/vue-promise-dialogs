@@ -1,9 +1,10 @@
 [![npm](https://img.shields.io/npm/v/vue-promise-dialogs?style=for-the-badge)](https://www.npmjs.com/package/vue-promise-dialogs)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/vue-promise-dialogs?style=for-the-badge)](https://bundlephobia.com/result?p=vue-promise-dialogs)
+[![demo](https://img.shields.io/badge/demo-green?style=for-the-badge)](https://djaler.github.io/vue-promise-dialogs/#/)
 
 # Vue Promise Dialogs
 
-> A tiny & modern library that allows you to work with dialogs as with asynchronous functions. [See demo](https://codepen.io/djaler/pen/xxEMZNr?editors=1010)
+> A tiny & modern library that allows you to work with dialogs as with asynchronous functions.
 
 ## Why?
 
