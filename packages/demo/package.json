@@ -1,0 +1,18 @@
+{
+  "name": "demo",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@picocss/pico": "1.5.3",
+    "vue": "3.2.37",
+    "vue-promise-dialogs": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "2.3.3",
+    "@vue/compiler-sfc": "3.2.37",
+    "vite": "2.9.12"
+  }
+}

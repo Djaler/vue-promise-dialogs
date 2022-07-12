@@ -10,6 +10,8 @@
     "test:vue2": "npm run switch-vue2 && cd packages/tests-vue2 && npm run test",
     "test:vue3": "npm run switch-vue3 && cd packages/tests-vue3 && npm run test",
     "test": "npm run test:vue2 && npm run test:vue3",
+    "demo": "cd packages/demo && npm run dev",
+    "demo:build": "cd packages/demo && npm run build",
     "build": "cd packages/core && npm run build",
     "prerelease": "npm run lint && npm run test && npm run build",
     "release": "commit-and-tag-version --preset @djaler/standard",
