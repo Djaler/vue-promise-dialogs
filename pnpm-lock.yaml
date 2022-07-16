@@ -28,7 +28,7 @@ importers:
 
   packages/core:
     specifiers:
-      '@rollup/plugin-replace': 2.3.4
+      '@rollup/plugin-replace': 2.4.2
       agadoo: 2.0.0
       clean-publish: 4.0.0
       es-check: 5.2.4
@@ -39,7 +39,7 @@ importers:
     dependencies:
       vue-demi: 0.13.4_vue@3.2.37
     devDependencies:
-      '@rollup/plugin-replace': 2.3.4
+      '@rollup/plugin-replace': 2.4.2
       agadoo: 2.0.0
       clean-publish: 4.0.0
       es-check: 5.2.4
@@ -242,8 +242,8 @@ packages:
     resolution: {integrity: sha512-ZdZOxjlmj0BkpGpYo/ODgAcFpqIgpAACqEmIgpFtxHkam06ITfUfcj9+mPcd+Ti8Dh0KCSvHpmSnJA3+tOStlQ==}
     dev: false
 
-  /@rollup/plugin-replace/2.3.4:
-    resolution: {integrity: sha512-waBhMzyAtjCL1GwZes2jaE9MjuQ/DQF2BatH3fRivUF3z0JBFrU0U6iBNC/4WR+2rLKhaAhPWDNPYp4mI6RqdQ==}
+  /@rollup/plugin-replace/2.4.2:
+    resolution: {integrity: sha512-IGcu+cydlUMZ5En85jxHH4qj2hta/11BHq95iHEyb2sbgiN0eCdzvUcHw5gt9pBL5lTi4JDYJ1acCoMGpTvEZg==}
     peerDependencies:
       rollup: ^1.20.0 || ^2.0.0
     dependencies:
