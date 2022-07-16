@@ -6,6 +6,17 @@
             <div class="grid">
                 <button @click="close">Ok</button>
             </div>
+
+            <footer>
+                <small>
+                    <a href="https://github.com/Djaler/vue-promise-dialogs/blob/master/packages/demo/src/notify-dialog/NotifyDialog.vue"
+                       class="secondary"
+                       target="_blank"
+                    >
+                        Source code
+                    </a>
+                </small>
+            </footer>
         </article>
     </dialog>
 </template>

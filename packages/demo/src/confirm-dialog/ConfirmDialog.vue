@@ -7,6 +7,17 @@
                 <button @click="confirm">{{ params.confirmButtonText || 'Yes' }}</button>
                 <button @click="decline">{{ params.declineButtonText || 'No' }}</button>
             </div>
+
+            <footer>
+                <small>
+                    <a href="https://github.com/Djaler/vue-promise-dialogs/blob/master/packages/demo/src/confirm-dialog/ConfirmDialog.vue"
+                       class="secondary"
+                       target="_blank"
+                    >
+                        Source code
+                    </a>
+                </small>
+            </footer>
         </article>
     </dialog>
 </template>

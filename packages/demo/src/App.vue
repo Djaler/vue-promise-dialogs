@@ -2,6 +2,16 @@
     <main class="container">
         <button @click="ask">Push me</button>
     </main>
+    <footer class="container-fluid">
+        <small>
+            <a href="https://github.com/Djaler/vue-promise-dialogs/blob/master/packages/demo/src/App.vue"
+               class="secondary"
+               target="_blank"
+            >
+                Source code
+            </a>
+        </small>
+    </footer>
     <PromiseDialogsWrapper/>
 </template>
 
@@ -46,6 +56,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 100vh;
+        min-height: calc(100vh - 2rem);
+    }
+
+    footer {
+        display: flex;
+        justify-content: right;
+        padding: 0 1rem;
     }
 </style>
