@@ -1,11 +1,11 @@
 import { del, markRaw, Ref, ref, set } from 'vue-demi';
 
-import { RegularComponent } from '../types';
+import { Component } from '../types';
 
 export const wrapperExists = ref(false);
 
 interface DialogData<P, R> {
-    component: RegularComponent;
+    component: Component;
     params: P;
     promiseResolve: (value: R) => void;
     promiseReject: (error: unknown) => void;
@@ -14,7 +14,7 @@ interface DialogData<P, R> {
 
 export const dialogsData: Ref<Record<symbol, DialogData<any, any>>> = ref({});
 
-export function add<P, R>(component: RegularComponent, params: P, unmountDelay?: number): Promise<R> {
+export function add<P, R>(component: Component, params: P, unmountDelay?: number): Promise<R> {
     return new Promise<R>((resolve, reject) => {
         // eslint-disable-next-line symbol-description
         set(dialogsData.value, Symbol(), {
