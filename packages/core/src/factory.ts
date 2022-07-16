@@ -1,8 +1,8 @@
 import { add, wrapperExists } from './dialogs-wrapper/store';
-import { RegularComponent } from './types';
+import { Component } from './types';
 
 export function createPromiseDialog<P, R>(
-    component: RegularComponent,
+    component: Component,
     unmountDelay?: number,
 ): (params: P) => Promise<R> {
     return function dialogFunction(params: P): Promise<R> {

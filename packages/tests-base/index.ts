@@ -1,7 +1,7 @@
 import { expect, SuiteAPI, SuiteHooks, TestAPI, vitest } from 'vitest';
 import { nextTick } from 'vue-demi';
 import { closeAllDialogs, createPromiseDialog, PromiseDialogsWrapper } from 'vue-promise-dialogs/src';
-import { RegularComponent } from 'vue-promise-dialogs/src/types';
+import { Component } from 'vue-promise-dialogs/src/types';
 
 interface TestDialogWrapper {
     clickButton(selector: string): Promise<void>;
@@ -21,8 +21,8 @@ interface Params {
     describe: SuiteAPI;
     it: TestAPI;
     beforeEach: BeforeEach;
-    TestDialog: RegularComponent;
-    TestDialogWithDelays: RegularComponent;
+    TestDialog: Component;
+    TestDialogWithDelays: Component;
 
     mountWrapper(promiseDialogsWrapper: typeof PromiseDialogsWrapper): Wrapper;
 }
