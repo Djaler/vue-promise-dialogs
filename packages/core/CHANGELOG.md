@@ -1,6 +1,23 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [2.0.0](https://github.com/Djaler/vue-promise-dialogs/compare/v1.3.3...v2.0.0) (2022-07-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove type inference for class-based components
+
+### Features
+
+* rewrite with vue-demi ([ad2f5b9](https://github.com/Djaler/vue-promise-dialogs/commit/ad2f5b92ce26cb9edde83d821f63bceab121eae7))
+* support vue 3 ([a1d174f](https://github.com/Djaler/vue-promise-dialogs/commit/a1d174f94a245d255e228c64f6d700b829e73e92))
+
+
+### chore
+
+* remove base component for class-based dialog components ([84af2b2](https://github.com/Djaler/vue-promise-dialogs/commit/84af2b2209151691bb09d263e1909d8894074072))
 
 ### [1.3.3](https://github.com/Djaler/vue-promise-dialogs/compare/v1.3.2...v1.3.3) (2022-06-23)
 
