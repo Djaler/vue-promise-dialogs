@@ -25,6 +25,7 @@
 <script lang="ts">
     import { defineComponent, PropType } from 'vue';
     import { ConfirmDialogParams } from './types';
+    import { usePromiseDialogControls } from 'vue-promise-dialogs/src';
 
     export default defineComponent({
         name: 'ConfirmDialog',
@@ -34,13 +35,17 @@
                 required: true,
             },
         },
-        methods: {
-            confirm() {
-                this.$emit('resolve', true);
-            },
-            decline() {
-                this.$emit('resolve', false);
-            },
+        setup() {
+            const { resolve } = usePromiseDialogControls<boolean>();
+
+            return {
+                confirm() {
+                    resolve(true);
+                },
+                decline() {
+                    resolve(false);
+                },
+            };
         },
     });
 </script>
