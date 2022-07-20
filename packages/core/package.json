@@ -49,7 +49,7 @@
     "es-check": "6.2.1",
     "vite": "2.9.12",
     "vue": "3.2.37",
-    "vue2": "npm:vue@2.6.12"
+    "vue2": "npm:vue@2.7.7"
   },
   "clean-publish": {
     "withoutPublish": true,
