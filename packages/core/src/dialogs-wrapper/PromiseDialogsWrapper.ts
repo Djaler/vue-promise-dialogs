@@ -31,11 +31,15 @@ export default defineComponent({
                 const params = value.params;
 
                 const resolve = (result: unknown, unmountDelay?: number) => resolveDialog(
-                    id, result, unmountDelay || value.unmountDelay || props.unmountDelay,
+                    id,
+                    result,
+                    unmountDelay || value.unmountDelay || props.unmountDelay,
                 );
 
                 const reject = (error: unknown, unmountDelay?: number) => rejectDialog(
-                    id, error, unmountDelay || value.unmountDelay || props.unmountDelay,
+                    id,
+                    error,
+                    unmountDelay || value.unmountDelay || props.unmountDelay,
                 );
 
                 if (isVue3) {

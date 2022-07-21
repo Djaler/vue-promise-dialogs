@@ -21,7 +21,7 @@
   "packageManager": "pnpm@6.33.1",
   "devDependencies": {
     "@djaler/conventional-changelog-standard": "1.2.0",
-    "@djaler/eslint-config-typescript": "0.0.7",
+    "@djaler/eslint-config-typescript": "0.0.9",
     "commit-and-tag-version": "10.0.1",
     "conventional-github-releaser": "3.1.5",
     "eslint": "7.32.0",
