@@ -27,6 +27,8 @@ jobs:
       - name: Install dependencies
         run: corepack pnpm install
       - name: Run build
+        run: npm run build
+      - name: Run build demo
         run: npm run demo:build
       - name: Deploy demo
         uses: JamesIves/github-pages-deploy-action@v4.4.0

@@ -18,7 +18,7 @@
 <script lang="ts">
     import { defineComponent } from 'vue';
     import { openConfirmDialog } from './confirm-dialog';
-    import { PromiseDialogsWrapper } from 'vue-promise-dialogs/src';
+    import { PromiseDialogsWrapper } from 'vue-promise-dialogs';
     import { openNotifyDialog } from './notify-dialog';
 
     export default defineComponent({

@@ -1,4 +1,4 @@
-import { createPromiseDialog } from 'vue-promise-dialogs/src';
+import { createPromiseDialog } from 'vue-promise-dialogs';
 
 import NotifyDialog from './NotifyDialog.vue';
 import { NotifyDialogParams } from './types';
