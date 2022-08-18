@@ -2,10 +2,10 @@
   "name": "tests-base",
   "private": true,
   "peerDependencies": {
-    "vitest": "0.18.1"
+    "vitest": "0.22.1"
   },
   "devDependencies": {
-    "vitest": "0.18.1",
+    "vitest": "0.22.1",
     "vue-promise-dialogs": "workspace:*"
   }
 }
