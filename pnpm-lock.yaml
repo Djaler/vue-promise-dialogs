@@ -33,7 +33,7 @@ importers:
       agadoo: 2.0.0
       clean-publish: 4.0.0
       es-check: 7.0.0
-      vite: 2.9.12
+      vite: 2.9.15
       vue: 3.2.37
       vue-demi: ^0.13.4
       vue2: npm:vue@2.6.12
@@ -44,7 +44,7 @@ importers:
       agadoo: 2.0.0
       clean-publish: 4.0.0
       es-check: 7.0.0
-      vite: 2.9.12
+      vite: 2.9.15
       vue: 3.2.37
       vue2: /vue/2.6.12
 
@@ -53,7 +53,7 @@ importers:
       '@picocss/pico': 1.5.3
       '@vitejs/plugin-vue': 2.3.3
       '@vue/compiler-sfc': 3.2.37
-      vite: 2.9.12
+      vite: 2.9.15
       vue: 3.2.37
       vue-promise-dialogs: workspace:*
     dependencies:
@@ -61,9 +61,9 @@ importers:
       vue: 3.2.37
       vue-promise-dialogs: link:../core
     devDependencies:
-      '@vitejs/plugin-vue': 2.3.3_vite@2.9.12+vue@3.2.37
+      '@vitejs/plugin-vue': 2.3.3_vite@2.9.15+vue@3.2.37
       '@vue/compiler-sfc': 3.2.37
-      vite: 2.9.12
+      vite: 2.9.15
 
   packages/tests-base:
     specifiers:
@@ -466,14 +466,14 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitejs/plugin-vue/2.3.3_vite@2.9.12+vue@3.2.37:
+  /@vitejs/plugin-vue/2.3.3_vite@2.9.15+vue@3.2.37:
     resolution: {integrity: sha512-SmQLDyhz+6lGJhPELsBdzXGc+AcaT8stgkbiTFGpXPe8Tl1tJaBw1A6pxDqDuRsVkD8uscrkx3hA7QDOoKYtyw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.12
+      vite: 2.9.15
       vue: 3.2.37
     dev: true
 
@@ -4523,6 +4523,30 @@ packages:
 
   /vite/2.9.12:
     resolution: {integrity: sha512-suxC36dQo9Rq1qMB2qiRorNJtJAdxguu5TMvBHOc/F370KvqAe9t48vYp+/TbPKRNrMh/J55tOUmkuIqstZaew==}
+    engines: {node: '>=12.2.0'}
+    hasBin: true
+    peerDependencies:
+      less: '*'
+      sass: '*'
+      stylus: '*'
+    peerDependenciesMeta:
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+    dependencies:
+      esbuild: 0.14.47
+      postcss: 8.4.14
+      resolve: 1.22.0
+      rollup: 2.61.1
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /vite/2.9.15:
+    resolution: {integrity: sha512-fzMt2jK4vQ3yK56te3Kqpkaeq9DkcZfBbzHwYpobasvgYmP2SoAr6Aic05CsB4CzCZbsDv4sujX3pkEGhLabVQ==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
