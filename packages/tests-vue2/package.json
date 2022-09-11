@@ -10,7 +10,7 @@
     "jsdom": "20.0.0",
     "tests-base": "workspace:*",
     "vitest": "0.22.1",
-    "vue": "2.6.12",
+    "vue": "2.7.10",
     "vue-template-compiler": "2.6.12"
   }
 }
