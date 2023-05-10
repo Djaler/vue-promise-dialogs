@@ -6,7 +6,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@picocss/pico": "1.5.3",
+    "@picocss/pico": "1.5.10",
     "vue": "3.2.37",
     "vue-promise-dialogs": "workspace:*"
   },
