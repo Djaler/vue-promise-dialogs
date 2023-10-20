@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@picocss/pico": "1.5.10",
-    "vue": "3.2.37",
+    "vue": "3.3.6",
     "vue-promise-dialogs": "workspace:*"
   },
   "devDependencies": {

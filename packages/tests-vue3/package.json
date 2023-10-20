@@ -9,6 +9,6 @@
     "jsdom": "20.0.0",
     "tests-base": "workspace:*",
     "vitest": "0.22.1",
-    "vue": "3.2.37"
+    "vue": "3.3.6"
   }
 }
